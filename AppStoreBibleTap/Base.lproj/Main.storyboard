@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -147,7 +147,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="v2q-r4-nsM">
-                                <rect key="frame" x="29.5" y="349" width="316" height="34"/>
+                                <rect key="frame" x="29.5" y="496" width="316" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRg-pS-eKW">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="34"/>
@@ -187,11 +187,12 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="316" id="5F6-Ow-28K"/>
+                                    <constraint firstAttribute="width" constant="316" id="S5d-va-ruT"/>
+                                    <constraint firstAttribute="height" constant="34" id="ozw-Ll-s9V"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="0Ne-bP-W9z">
-                                <rect key="frame" x="86" y="406" width="203" height="34"/>
+                                <rect key="frame" x="86" y="553" width="203" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiB-WY-l8E">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="34"/>
@@ -219,7 +220,8 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="203" id="v2B-n3-VDk"/>
+                                    <constraint firstAttribute="height" constant="34" id="gko-nC-fsF"/>
+                                    <constraint firstAttribute="width" constant="203" id="mvf-kA-0cv"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-RD-5ez">
@@ -252,7 +254,8 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="316" id="d1H-3p-Az1"/>
+                                    <constraint firstAttribute="height" constant="34" id="2Su-Qm-uYm"/>
+                                    <constraint firstAttribute="width" constant="316" id="AAU-Uv-eSZ"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -260,19 +263,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Xsx-Wo-h9O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="4wm-P4-Hdc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mVO-RD-5ez" secondAttribute="bottom" constant="23" id="7GX-mg-jfZ"/>
                             <constraint firstItem="Xsx-Wo-h9O" firstAttribute="top" secondItem="Vmu-yA-K0K" secondAttribute="bottom" id="AK9-UQ-pGY"/>
-                            <constraint firstItem="mVO-RD-5ez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FFB-EH-9h4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mVO-RD-5ez" secondAttribute="bottom" constant="23" id="Ba8-B5-gJQ"/>
+                            <constraint firstItem="mVO-RD-5ez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DSf-cz-3tw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xsx-Wo-h9O" secondAttribute="trailing" id="FGA-7t-A4j"/>
-                            <constraint firstItem="v2q-r4-nsM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ncm-K3-7v1"/>
-                            <constraint firstItem="v2q-r4-nsM" firstAttribute="top" secondItem="Xsx-Wo-h9O" secondAttribute="bottom" constant="35" id="Q51-2h-x6u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vmu-yA-K0K" secondAttribute="trailing" constant="30" id="Wpc-dX-Zvq"/>
+                            <constraint firstItem="mVO-RD-5ez" firstAttribute="top" secondItem="0Ne-bP-W9z" secondAttribute="bottom" constant="23" id="b27-Yd-1Ce"/>
                             <constraint firstItem="Xsx-Wo-h9O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gpz-0q-KV6"/>
                             <constraint firstItem="Xsx-Wo-h9O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hHM-k4-zcv"/>
-                            <constraint firstItem="0Ne-bP-W9z" firstAttribute="top" secondItem="v2q-r4-nsM" secondAttribute="bottom" constant="23" id="lkl-je-ik9"/>
-                            <constraint firstItem="0Ne-bP-W9z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nmv-Gx-Mze"/>
+                            <constraint firstItem="v2q-r4-nsM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hzi-i4-SbZ"/>
                             <constraint firstItem="Vmu-yA-K0K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="swt-EV-Oe7"/>
+                            <constraint firstItem="0Ne-bP-W9z" firstAttribute="top" secondItem="v2q-r4-nsM" secondAttribute="bottom" constant="23" id="wG0-6x-aU1"/>
                             <constraint firstItem="Vmu-yA-K0K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="wis-Jt-sx6"/>
+                            <constraint firstItem="0Ne-bP-W9z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wvh-Mn-wke"/>
                         </constraints>
                     </view>
                     <connections>
@@ -281,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="-41"/>
+            <point key="canvasLocation" x="221.59999999999999" y="-41.829085457271368"/>
         </scene>
     </scenes>
     <resources>
