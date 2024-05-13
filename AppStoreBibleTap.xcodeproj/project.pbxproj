@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF8539692BF231EF00E0FF68 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8539682BF231EF00E0FF68 /* SettingVC.swift */; };
 		DA156D252BEDC53600115A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D242BEDC53600115A5F /* AppDelegate.swift */; };
 		DA156D272BEDC53600115A5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D262BEDC53600115A5F /* SceneDelegate.swift */; };
-		DA156D292BEDC53600115A5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D282BEDC53600115A5F /* ViewController.swift */; };
+		DA156D292BEDC53600115A5F /* BibleTapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D282BEDC53600115A5F /* BibleTapVC.swift */; };
 		DA156D2C2BEDC53600115A5F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DA156D2B2BEDC53600115A5F /* Base */; };
 		DA156D2E2BEDC53700115A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA156D2D2BEDC53700115A5F /* Assets.xcassets */; };
 		DA156D312BEDC53700115A5F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DA156D302BEDC53700115A5F /* Base */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF8539682BF231EF00E0FF68 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		DA156D212BEDC53600115A5F /* AppStoreBibleTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreBibleTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA156D242BEDC53600115A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA156D262BEDC53600115A5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA156D282BEDC53600115A5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA156D282BEDC53600115A5F /* BibleTapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleTapVC.swift; sourceTree = "<group>"; };
 		DA156D2B2BEDC53600115A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA156D2D2BEDC53700115A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA156D302BEDC53700115A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +62,8 @@
 			children = (
 				DA156D242BEDC53600115A5F /* AppDelegate.swift */,
 				DA156D262BEDC53600115A5F /* SceneDelegate.swift */,
-				DA156D282BEDC53600115A5F /* ViewController.swift */,
+				DA156D282BEDC53600115A5F /* BibleTapVC.swift */,
+				AF8539682BF231EF00E0FF68 /* SettingVC.swift */,
 				DA156D2A2BEDC53600115A5F /* Main.storyboard */,
 				DA156D2D2BEDC53700115A5F /* Assets.xcassets */,
 				DA156D2F2BEDC53700115A5F /* LaunchScreen.storyboard */,
@@ -150,7 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA156D292BEDC53600115A5F /* ViewController.swift in Sources */,
+				DA156D292BEDC53600115A5F /* BibleTapVC.swift in Sources */,
+				AF8539692BF231EF00E0FF68 /* SettingVC.swift in Sources */,
 				DA156D252BEDC53600115A5F /* AppDelegate.swift in Sources */,
 				DA156D272BEDC53600115A5F /* SceneDelegate.swift in Sources */,
 			);
