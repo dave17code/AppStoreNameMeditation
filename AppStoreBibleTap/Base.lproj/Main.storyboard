@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -8,274 +8,273 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BMYEONSUNG_otf.otf">
+            <string>BMYEONSUNG-OTF</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppStoreBibleTap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-yA-K0K">
-                                <rect key="frame" x="30" y="52" width="315" height="261"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VMh-Su-cwV">
+                                <rect key="frame" x="26" y="137.33333333333334" width="362" height="441.33333333333326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-Fi-Z9L">
-                                        <rect key="frame" x="23" y="101.5" width="269" height="58"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Bible Tap ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="말씀톡">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="프로젝트">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="시작">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="천천히">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="차근차근">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="기대가">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" ">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="됩니다">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
-                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-yA-K0K">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="287"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="njK-2P-SCj">
+                                                <rect key="frame" x="23" y="97" width="316" height="93"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-Fi-Z9L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="316" height="57.666666666666664"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Bible Tap ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="말씀톡">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="프로젝트">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="시작">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="천천히">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="차근차근">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="기대가">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="됩니다">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="24" name="BMYEONSUNG-OTF"/>
+                                                                    <font key="NSOriginalFont" metaFont="system" size="17"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 성경 말씀 -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3i-bW-IbU">
+                                                        <rect key="frame" x="0.0" y="73.666666666666657" width="316" height="19.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="njK-2P-SCj" firstAttribute="leading" secondItem="Vmu-yA-K0K" secondAttribute="leading" constant="23" id="AJL-4Y-HTJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="njK-2P-SCj" secondAttribute="trailing" constant="23" id="NGa-WB-kC6"/>
+                                            <constraint firstItem="njK-2P-SCj" firstAttribute="centerX" secondItem="Vmu-yA-K0K" secondAttribute="centerX" id="OV7-SN-MMj"/>
+                                            <constraint firstItem="njK-2P-SCj" firstAttribute="centerY" secondItem="Vmu-yA-K0K" secondAttribute="centerY" id="bMB-4u-d1i"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="qkc-dg-qGw">
+                                        <rect key="frame" x="0.0" y="317" width="362" height="124.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="1au-aT-7CE">
+                                                <rect key="frame" x="0.0" y="0.0" width="362" height="26"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0Z-7z-kwl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="105.33333333333333" height="26"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="사랑">
+                                                            <backgroundConfiguration key="background" cornerRadius="12"/>
+                                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1r3-0Y-aex">
+                                                        <rect key="frame" x="128.33333333333334" y="0.0" width="105.33333333333334" height="26"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="사랑">
+                                                            <backgroundConfiguration key="background" cornerRadius="12"/>
+                                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5Q-AH-Vuu">
+                                                        <rect key="frame" x="256.66666666666669" y="0.0" width="105.33333333333331" height="26"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="사랑">
+                                                            <backgroundConfiguration key="background" cornerRadius="12"/>
+                                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Cr-tS-NCP">
+                                                <rect key="frame" x="0.0" y="49" width="362" height="26.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58k-K1-4SP">
+                                                        <rect key="frame" x="192.66666666666666" y="0.0" width="105.66666666666666" height="26.333333333333332"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="사랑">
+                                                            <backgroundConfiguration key="background" cornerRadius="12"/>
+                                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt3-hI-APO">
+                                                        <rect key="frame" x="64.333333333333343" y="0.0" width="105.33333333333334" height="26.333333333333332"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="사랑">
+                                                            <backgroundConfiguration key="background" cornerRadius="12"/>
+                                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaj-xV-Z7c">
+                                                        <rect key="frame" x="169.66666666666666" y="0.0" width="23" height="26.333333333333332"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="23" id="jF1-kg-bCr"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="uaj-xV-Z7c" firstAttribute="leading" secondItem="Bt3-hI-APO" secondAttribute="trailing" id="4GH-eC-WwB"/>
+                                                    <constraint firstItem="58k-K1-4SP" firstAttribute="centerY" secondItem="8Cr-tS-NCP" secondAttribute="centerY" id="8eK-Jq-yH2"/>
+                                                    <constraint firstItem="Bt3-hI-APO" firstAttribute="centerY" secondItem="8Cr-tS-NCP" secondAttribute="centerY" id="CE9-xF-xOM"/>
+                                                    <constraint firstItem="uaj-xV-Z7c" firstAttribute="top" secondItem="8Cr-tS-NCP" secondAttribute="top" id="Dft-sQ-D5f"/>
+                                                    <constraint firstAttribute="bottom" secondItem="uaj-xV-Z7c" secondAttribute="bottom" id="SQs-Ay-k4L"/>
+                                                    <constraint firstItem="uaj-xV-Z7c" firstAttribute="centerX" secondItem="8Cr-tS-NCP" secondAttribute="centerX" id="Xp5-aR-pm6"/>
+                                                    <constraint firstItem="58k-K1-4SP" firstAttribute="leading" secondItem="uaj-xV-Z7c" secondAttribute="trailing" id="qMw-mP-ESb"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="AJL-wP-1jb">
+                                                <rect key="frame" x="0.0" y="98.333333333333314" width="362" height="26"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-yx-qem">
+                                                        <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="26"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" image="camera" catalog="system">
+                                                            <backgroundConfiguration key="background" cornerRadius="12"/>
+                                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-0d-lm9">
+                                                        <rect key="frame" x="192.66666666666663" y="0.0" width="169.33333333333337" height="26"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="공유하기">
+                                                            <backgroundConfiguration key="background" cornerRadius="12" strokeWidth="1">
+                                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Bt3-hI-APO" firstAttribute="height" secondItem="Q0Z-7z-kwl" secondAttribute="height" multiplier="1.01538" id="68d-B5-11w"/>
+                                            <constraint firstItem="58k-K1-4SP" firstAttribute="width" secondItem="1r3-0Y-aex" secondAttribute="width" multiplier="1.00532" id="ABA-jy-FKl"/>
+                                            <constraint firstItem="58k-K1-4SP" firstAttribute="height" secondItem="1r3-0Y-aex" secondAttribute="height" multiplier="1.01538" id="Z30-w6-b6N"/>
+                                            <constraint firstItem="Bt3-hI-APO" firstAttribute="width" secondItem="Q0Z-7z-kwl" secondAttribute="width" id="vx1-Xa-MSX"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="nbg-Fi-Z9L" firstAttribute="leading" secondItem="Vmu-yA-K0K" secondAttribute="leading" constant="23" id="5vD-pF-DvM"/>
-                                    <constraint firstAttribute="trailing" secondItem="nbg-Fi-Z9L" secondAttribute="trailing" constant="23" id="PxY-6I-roS"/>
-                                    <constraint firstItem="nbg-Fi-Z9L" firstAttribute="centerY" secondItem="Vmu-yA-K0K" secondAttribute="centerY" id="lKI-OU-2AP"/>
-                                    <constraint firstItem="nbg-Fi-Z9L" firstAttribute="centerX" secondItem="Vmu-yA-K0K" secondAttribute="centerX" id="zX4-yp-8l2"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsx-Wo-h9O">
-                                <rect key="frame" x="0.0" y="313" width="375" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="Ej6-hS-ofe"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="v2q-r4-nsM">
-                                <rect key="frame" x="29.5" y="496" width="316" height="34"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRg-pS-eKW">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="IFv-4N-Vmn"/>
-                                            <constraint firstAttribute="height" constant="34" id="we7-ZM-6eo"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="사랑">
-                                            <backgroundConfiguration key="background" cornerRadius="12"/>
-                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqc-fh-iwC">
-                                        <rect key="frame" x="113" y="0.0" width="90" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="6NP-OQ-WLr"/>
-                                            <constraint firstAttribute="height" constant="34" id="rlz-Zf-P9S"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="축복">
-                                            <backgroundConfiguration key="background" cornerRadius="12"/>
-                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yur-6B-Y6d">
-                                        <rect key="frame" x="226" y="0.0" width="90" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="C2K-Bu-GA8"/>
-                                            <constraint firstAttribute="width" constant="90" id="bRO-9G-mc4"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="평안">
-                                            <backgroundConfiguration key="background" cornerRadius="12"/>
-                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="316" id="S5d-va-ruT"/>
-                                    <constraint firstAttribute="height" constant="34" id="ozw-Ll-s9V"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="0Ne-bP-W9z">
-                                <rect key="frame" x="86" y="553" width="203" height="34"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiB-WY-l8E">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="UOw-OE-qPp"/>
-                                            <constraint firstAttribute="height" constant="34" id="uMb-LZ-HMS"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="보호">
-                                            <backgroundConfiguration key="background" cornerRadius="12"/>
-                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ev-pW-CfD">
-                                        <rect key="frame" x="113" y="0.0" width="90" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="LFj-LK-Pz1"/>
-                                            <constraint firstAttribute="width" constant="90" id="rVG-9Z-CIq"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="믿음">
-                                            <backgroundConfiguration key="background" cornerRadius="12"/>
-                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="gko-nC-fsF"/>
-                                    <constraint firstAttribute="width" constant="203" id="mvf-kA-0cv"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-RD-5ez">
-                                <rect key="frame" x="29.5" y="610" width="316" height="34"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-yx-qem">
-                                        <rect key="frame" x="0.0" y="0.0" width="146.5" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="wgi-2l-kxW"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="camera" catalog="system">
-                                            <backgroundConfiguration key="background" cornerRadius="12"/>
-                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-0d-lm9">
-                                        <rect key="frame" x="169.5" y="0.0" width="146.5" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="jVG-pz-ILH"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="공유하기">
-                                            <backgroundConfiguration key="background" cornerRadius="12" strokeWidth="1">
-                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="2Su-Qm-uYm"/>
-                                    <constraint firstAttribute="width" constant="316" id="AAU-Uv-eSZ"/>
+                                    <constraint firstItem="Vmu-yA-K0K" firstAttribute="height" secondItem="VMh-Su-cwV" secondAttribute="height" multiplier="0.65" id="GAp-zZ-6W3"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xsx-Wo-h9O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="4wm-P4-Hdc"/>
-                            <constraint firstItem="Xsx-Wo-h9O" firstAttribute="top" secondItem="Vmu-yA-K0K" secondAttribute="bottom" id="AK9-UQ-pGY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mVO-RD-5ez" secondAttribute="bottom" constant="23" id="Ba8-B5-gJQ"/>
-                            <constraint firstItem="mVO-RD-5ez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DSf-cz-3tw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xsx-Wo-h9O" secondAttribute="trailing" id="FGA-7t-A4j"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vmu-yA-K0K" secondAttribute="trailing" constant="30" id="Wpc-dX-Zvq"/>
-                            <constraint firstItem="mVO-RD-5ez" firstAttribute="top" secondItem="0Ne-bP-W9z" secondAttribute="bottom" constant="23" id="b27-Yd-1Ce"/>
-                            <constraint firstItem="Xsx-Wo-h9O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gpz-0q-KV6"/>
-                            <constraint firstItem="Xsx-Wo-h9O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hHM-k4-zcv"/>
-                            <constraint firstItem="v2q-r4-nsM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hzi-i4-SbZ"/>
-                            <constraint firstItem="Vmu-yA-K0K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="swt-EV-Oe7"/>
-                            <constraint firstItem="0Ne-bP-W9z" firstAttribute="top" secondItem="v2q-r4-nsM" secondAttribute="bottom" constant="23" id="wG0-6x-aU1"/>
-                            <constraint firstItem="Vmu-yA-K0K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="wis-Jt-sx6"/>
-                            <constraint firstItem="0Ne-bP-W9z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wvh-Mn-wke"/>
+                            <constraint firstItem="VMh-Su-cwV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="EML-ao-LcM"/>
+                            <constraint firstItem="VMh-Su-cwV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eog-FU-iFc"/>
+                            <constraint firstItem="VMh-Su-cwV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-10" id="FFF-i2-5GW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VMh-Su-cwV" secondAttribute="trailing" constant="26" id="RnV-A7-a1f"/>
+                            <constraint firstItem="VMh-Su-cwV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="sAY-kZ-EwI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -286,6 +285,21 @@
             </objects>
             <point key="canvasLocation" x="221.59999999999999" y="-41.829085457271368"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="HcG-w2-aZh">
+            <objects>
+                <viewController id="Nui-Vi-qQ4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TbC-7U-bHo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="o90-nm-Cai"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CR-YI-5Rg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="-42"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="93"/>
@@ -293,7 +307,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

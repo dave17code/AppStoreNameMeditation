@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         bibleVerseContainerView.layer.borderWidth = 1.6
         bibleVerseContainerView.layer.cornerRadius = 12
     }
