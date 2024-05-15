@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m0f-fW-c3d">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -20,45 +20,80 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BibleTapVC" customModule="AppStoreBibleTap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VMh-Su-cwV">
-                                <rect key="frame" x="26" y="137" width="341" height="358"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="76f-0g-fJw">
+                                <rect key="frame" x="26" y="752" width="338" height="38"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-yA-K0K">
-                                        <rect key="frame" x="0.0" y="0.0" width="341" height="358"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="njK-2P-SCj">
-                                                <rect key="frame" x="23" y="118" width="295" height="122"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="말씀톡 프로젝트 시작 천천히 차근차근 기대가 됩니다 고객 만족을 위해서 나아갑니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-Fi-Z9L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="86.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM Yeonsung" pointSize="24"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 성경 말씀 -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3i-bW-IbU">
-                                                        <rect key="frame" x="0.0" y="102.66666666666669" width="295" height="19.333333333333329"/>
-                                                        <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="16"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="njK-2P-SCj" firstAttribute="leading" secondItem="Vmu-yA-K0K" secondAttribute="leading" constant="23" id="9HL-9I-SW3"/>
-                                            <constraint firstAttribute="trailing" secondItem="njK-2P-SCj" secondAttribute="trailing" constant="23" id="CX1-7O-XwA"/>
-                                            <constraint firstItem="njK-2P-SCj" firstAttribute="centerX" secondItem="Vmu-yA-K0K" secondAttribute="centerX" id="jhH-L1-0Wk"/>
-                                            <constraint firstItem="njK-2P-SCj" firstAttribute="centerY" secondItem="Vmu-yA-K0K" secondAttribute="centerY" id="pYu-nm-Tbo"/>
-                                        </constraints>
-                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZA7-lq-iSR">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.66666666666666" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <imageReference key="image" image="camera" catalog="system" symbolScale="medium"/>
+                                            <backgroundConfiguration key="background" cornerRadius="12"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qn9-hR-xY0">
+                                        <rect key="frame" x="180.66666666666663" y="0.0" width="157.33333333333337" height="38"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="공유하기">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="17.5" name="BMYEONSUNG-OTF"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="filled" title="공유하기">
+                                            <backgroundConfiguration key="background" cornerRadius="12"/>
+                                            <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17.5"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
+                                        </buttonConfiguration>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="0DX-vH-FMd"/>
+                                </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaO-ST-mh1">
+                                <rect key="frame" x="26" y="77" width="338" height="443"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cdL-hn-xP7">
+                                        <rect key="frame" x="23" y="160.66666666666666" width="292" height="121.99999999999997"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="말씀톡 프로젝트 시작 천천히 차근차근 기대가 됩니다 고객 만족을 위해서 나아갑니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPp-uC-Bhw">
+                                                <rect key="frame" x="0.0" y="0.0" width="292" height="86.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM Yeonsung" pointSize="24"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 성경 말씀 -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="few-qI-dUl">
+                                                <rect key="frame" x="0.0" y="102.66666666666666" width="292" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="16"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="cdL-hn-xP7" firstAttribute="centerY" secondItem="UaO-ST-mh1" secondAttribute="centerY" id="49x-gV-eUJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="cdL-hn-xP7" secondAttribute="trailing" constant="23" id="gew-B8-1eS"/>
+                                    <constraint firstItem="cdL-hn-xP7" firstAttribute="centerX" secondItem="UaO-ST-mh1" secondAttribute="centerX" id="miJ-Iy-Et2"/>
+                                    <constraint firstItem="cdL-hn-xP7" firstAttribute="leading" secondItem="UaO-ST-mh1" secondAttribute="leading" constant="23" id="xZE-ch-b3H"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="qkc-dg-qGw">
-                                <rect key="frame" x="26" y="531" width="341" height="160"/>
+                                <rect key="frame" x="26" y="556" width="341" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="1au-aT-7CE">
                                         <rect key="frame" x="0.0" y="0.0" width="341" height="38"/>
@@ -180,34 +215,65 @@
                                             <constraint firstItem="58k-K1-4SP" firstAttribute="leading" secondItem="uaj-xV-Z7c" secondAttribute="trailing" id="qMw-mP-ESb"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="AJL-wP-1jb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="zJN-mi-1cb">
                                         <rect key="frame" x="0.0" y="122" width="341" height="38"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG7-yx-qem">
-                                                <rect key="frame" x="0.0" y="0.0" width="159" height="38"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled">
-                                                    <imageReference key="image" image="camera" catalog="system" symbolScale="medium"/>
-                                                    <backgroundConfiguration key="background" cornerRadius="12"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eUy-0d-lm9">
-                                                <rect key="frame" x="182" y="0.0" width="159" height="38"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ch-Ov-Grg">
+                                                <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="38"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="공유하기">
+                                                        <fragment content="찬양">
+                                                            <attributes>
+                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="17.5" name="BMYEONSUNG-OTF"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="bibleVerseThemeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQy-82-RRZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FxP-En-hpG">
+                                                <rect key="frame" x="121.33333333333334" y="0.0" width="98.333333333333343" height="38"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="치유">
+                                                            <attributes>
+                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" size="17.5" name="BMYEONSUNG-OTF"/>
+                                                                <font key="NSOriginalFont" metaFont="smallSystem"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="bibleVerseThemeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a1D-W2-JMt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJq-9n-a3k">
+                                                <rect key="frame" x="242.66666666666671" y="0.0" width="98.333333333333343" height="38"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="지혜">
                                                             <attributes>
                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <font key="NSFont" size="17.5" name="BMYEONSUNG-OTF"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="bibleVerseThemeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5S-oq-t9Q"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -215,7 +281,7 @@
                                 <constraints>
                                     <constraint firstItem="Bt3-hI-APO" firstAttribute="height" secondItem="Q0Z-7z-kwl" secondAttribute="height" multiplier="1.01538" id="68d-B5-11w"/>
                                     <constraint firstItem="58k-K1-4SP" firstAttribute="width" secondItem="1r3-0Y-aex" secondAttribute="width" multiplier="1.00532" id="ABA-jy-FKl"/>
-                                    <constraint firstAttribute="height" constant="160" id="Ohf-4A-fDD"/>
+                                    <constraint firstAttribute="height" constant="160" id="J45-5G-ohZ"/>
                                     <constraint firstItem="58k-K1-4SP" firstAttribute="height" secondItem="1r3-0Y-aex" secondAttribute="height" multiplier="1.01538" id="Z30-w6-b6N"/>
                                     <constraint firstItem="Bt3-hI-APO" firstAttribute="width" secondItem="Q0Z-7z-kwl" secondAttribute="width" id="vx1-Xa-MSX"/>
                                 </constraints>
@@ -224,25 +290,30 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VMh-Su-cwV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Bi-wb-lxk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qkc-dg-qGw" secondAttribute="trailing" constant="26" id="9dp-X7-Esj"/>
-                            <constraint firstItem="VMh-Su-cwV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="AGU-In-2ch"/>
-                            <constraint firstItem="qkc-dg-qGw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="AQz-tH-eGj"/>
-                            <constraint firstItem="VMh-Su-cwV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-110" id="Gxh-4F-rqj"/>
-                            <constraint firstItem="qkc-dg-qGw" firstAttribute="top" secondItem="VMh-Su-cwV" secondAttribute="bottom" constant="36" id="J6T-ap-PUf"/>
-                            <constraint firstItem="VMh-Su-cwV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.42" id="TaL-bA-USM"/>
-                            <constraint firstAttribute="trailing" secondItem="VMh-Su-cwV" secondAttribute="trailing" constant="26" id="bAp-IE-7B8"/>
+                            <constraint firstItem="UaO-ST-mh1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="26" id="2SS-JR-W7b"/>
+                            <constraint firstItem="qkc-dg-qGw" firstAttribute="top" secondItem="UaO-ST-mh1" secondAttribute="bottom" constant="36" id="KUC-fj-1rD"/>
+                            <constraint firstItem="76f-0g-fJw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="LcI-Wi-eZP"/>
+                            <constraint firstItem="UaO-ST-mh1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Uf5-Qh-ycM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qkc-dg-qGw" secondAttribute="trailing" constant="23" id="XDi-yb-oEk"/>
+                            <constraint firstAttribute="trailing" secondItem="UaO-ST-mh1" secondAttribute="trailing" constant="26" id="asD-Zk-maR"/>
+                            <constraint firstItem="qkc-dg-qGw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="cPb-Gh-FfD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="76f-0g-fJw" secondAttribute="bottom" constant="20" id="nE9-H0-Tjc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="76f-0g-fJw" secondAttribute="trailing" constant="26" id="pAi-rP-qCY"/>
+                            <constraint firstItem="76f-0g-fJw" firstAttribute="top" secondItem="qkc-dg-qGw" secondAttribute="bottom" constant="36" id="szc-ip-S3y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5zs-d0-QhB"/>
                     <connections>
-                        <outlet property="bibleVerseContainerView" destination="Vmu-yA-K0K" id="EQz-SC-3gO"/>
-                        <outlet property="bibleVerseShareButton" destination="eUy-0d-lm9" id="e4c-6b-nve"/>
+                        <outlet property="bibleVerseContainerView" destination="UaO-ST-mh1" id="wIl-m4-Vlq"/>
+                        <outlet property="bibleVerseShareButton" destination="qn9-hR-xY0" id="u9h-Em-WCi"/>
                         <outletCollection property="bibleVerseThemeButton" destination="Q0Z-7z-kwl" collectionClass="NSMutableArray" id="xcV-cR-ljI"/>
                         <outletCollection property="bibleVerseThemeButton" destination="1r3-0Y-aex" collectionClass="NSMutableArray" id="x7G-cJ-hiF"/>
                         <outletCollection property="bibleVerseThemeButton" destination="y5Q-AH-Vuu" collectionClass="NSMutableArray" id="2iV-D6-jlo"/>
                         <outletCollection property="bibleVerseThemeButton" destination="Bt3-hI-APO" collectionClass="NSMutableArray" id="LIF-6U-ngL"/>
                         <outletCollection property="bibleVerseThemeButton" destination="58k-K1-4SP" collectionClass="NSMutableArray" id="opc-9C-3kn"/>
+                        <outletCollection property="bibleVerseThemeButton" destination="0ch-Ov-Grg" collectionClass="NSMutableArray" id="Rk7-ty-bL3"/>
+                        <outletCollection property="bibleVerseThemeButton" destination="FxP-En-hpG" collectionClass="NSMutableArray" id="jrE-yz-6YU"/>
+                        <outletCollection property="bibleVerseThemeButton" destination="PJq-9n-a3k" collectionClass="NSMutableArray" id="LHT-MO-27K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -254,7 +325,7 @@
             <objects>
                 <viewController storyboardIdentifier="SettingVC" id="Nui-Vi-qQ4" customClass="SettingVC" customModule="AppStoreBibleTap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TbC-7U-bHo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="o90-nm-Cai"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -267,13 +338,15 @@
         <!--Navigation Controller-->
         <scene sceneID="iwT-Un-HFE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m0f-fW-c3d" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="m0f-fW-c3d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DIv-2z-00v">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="csn-QD-YOj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FwV-ys-yYH"/>
                     </connections>
@@ -287,6 +360,9 @@
         <image name="camera" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

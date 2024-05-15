@@ -23,7 +23,6 @@ class BibleTapVC: UIViewController {
             button.layer.borderWidth = 1.2
         }
         bibleVerseShareButton.layer.cornerRadius = 12
-        bibleVerseShareButton.layer.borderWidth = 1.2
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,8 +48,10 @@ class BibleTapVC: UIViewController {
     }
     
     @IBAction func bibleVerseThemeButton(_ sender: UIButton) {
+        
         if let index = bibleVerseThemeButton.firstIndex(of: sender) {
             updateButtonSelection(selectedButtonIndex: index)
+            print(index)
         }
     }
     
