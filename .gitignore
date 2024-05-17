@@ -50,13 +50,11 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 
-### Xcode Patch ###
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcodeproj/project.xcworkspace/
-!*.xcworkspace/contents.xcworkspacedata
-/*.gcno
-**/xcshareddata/WorkspaceSettings.xcsettings
+# Xcode UserData
+xcuserdata/
+
+# Build Artifacts
+DerivedData/
+build/
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,xcode,cocoapods

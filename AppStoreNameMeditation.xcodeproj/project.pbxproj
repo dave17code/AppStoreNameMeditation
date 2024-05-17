@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		AF8539682BF231EF00E0FF68 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
-		DA156D212BEDC53600115A5F /* AppStoreBibleTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreBibleTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA156D212BEDC53600115A5F /* AppStoreNameMeditationp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreNameMeditationp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA156D242BEDC53600115A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA156D262BEDC53600115A5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DA156D282BEDC53600115A5F /* BibleTapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleTapVC.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		DA156D182BEDC53600115A5F = {
 			isa = PBXGroup;
 			children = (
-				DA156D232BEDC53600115A5F /* AppStoreBibleTap */,
+				DA156D232BEDC53600115A5F /* AppStoreNameMeditation */,
 				DA156D222BEDC53600115A5F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 		DA156D222BEDC53600115A5F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA156D212BEDC53600115A5F /* AppStoreBibleTap.app */,
+				DA156D212BEDC53600115A5F /* AppStoreNameMeditationp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DA156D232BEDC53600115A5F /* AppStoreBibleTap */ = {
+		DA156D232BEDC53600115A5F /* AppStoreNameMeditation */ = {
 			isa = PBXGroup;
 			children = (
 				DA156D242BEDC53600115A5F /* AppDelegate.swift */,
@@ -73,7 +73,7 @@
 				DA156D322BEDC53700115A5F /* Info.plist */,
 				DA156D382BEDC58A00115A5F /* Font */,
 			);
-			path = AppStoreBibleTap;
+			path = AppStoreNameMeditation;
 			sourceTree = "<group>";
 		};
 		DA156D382BEDC58A00115A5F /* Font */ = {
@@ -87,9 +87,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA156D202BEDC53600115A5F /* AppStoreBibleTap */ = {
+		DA156D202BEDC53600115A5F /* AppStoreNameMeditationp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA156D352BEDC53700115A5F /* Build configuration list for PBXNativeTarget "AppStoreBibleTap" */;
+			buildConfigurationList = DA156D352BEDC53700115A5F /* Build configuration list for PBXNativeTarget "AppStoreNameMeditationp" */;
 			buildPhases = (
 				DA156D1D2BEDC53600115A5F /* Sources */,
 				DA156D1E2BEDC53600115A5F /* Frameworks */,
@@ -99,9 +99,9 @@
 			);
 			dependencies = (
 			);
-			name = AppStoreBibleTap;
+			name = AppStoreNameMeditationp;
 			productName = AppStoreBibleTap;
-			productReference = DA156D212BEDC53600115A5F /* AppStoreBibleTap.app */;
+			productReference = DA156D212BEDC53600115A5F /* AppStoreNameMeditationp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DA156D1C2BEDC53600115A5F /* Build configuration list for PBXProject "AppStoreBibleTap" */;
+			buildConfigurationList = DA156D1C2BEDC53600115A5F /* Build configuration list for PBXProject "AppStoreNameMeditation" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -132,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA156D202BEDC53600115A5F /* AppStoreBibleTap */,
+				DA156D202BEDC53600115A5F /* AppStoreNameMeditationp */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AppStoreBibleTap/Info.plist;
+				INFOPLIST_FILE = AppStoreNameMeditation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -325,7 +325,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Dave17code.AppStoreBibleTap;
+				PRODUCT_BUNDLE_IDENTIFIER = Dave17code.AppStoreNameMeditation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -341,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AppStoreBibleTap/Info.plist;
+				INFOPLIST_FILE = AppStoreNameMeditation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -353,7 +353,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Dave17code.AppStoreBibleTap;
+				PRODUCT_BUNDLE_IDENTIFIER = Dave17code.AppStoreNameMeditation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -364,7 +364,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA156D1C2BEDC53600115A5F /* Build configuration list for PBXProject "AppStoreBibleTap" */ = {
+		DA156D1C2BEDC53600115A5F /* Build configuration list for PBXProject "AppStoreNameMeditation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA156D332BEDC53700115A5F /* Debug */,
@@ -373,7 +373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA156D352BEDC53700115A5F /* Build configuration list for PBXNativeTarget "AppStoreBibleTap" */ = {
+		DA156D352BEDC53700115A5F /* Build configuration list for PBXNativeTarget "AppStoreNameMeditationp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA156D362BEDC53700115A5F /* Debug */,
