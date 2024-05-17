@@ -32,6 +32,7 @@ class BibleTapVC: UIViewController {
         } else {
             let selectedButtonIndex = UserDefaults.standard.integer(forKey: "selectedButtonIndex")
             updateButtonSelection(selectedButtonIndex: selectedButtonIndex)
+            print(selectedButtonIndex)
         }
     }
     
@@ -48,7 +49,6 @@ class BibleTapVC: UIViewController {
     }
     
     @IBAction func bibleVerseThemeButton(_ sender: UIButton) {
-        
         if let index = bibleVerseThemeButton.firstIndex(of: sender) {
             updateButtonSelection(selectedButtonIndex: index)
             print(index)
