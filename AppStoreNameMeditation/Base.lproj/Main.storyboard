@@ -71,6 +71,9 @@
                                                     <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM Yeonsung" pointSize="17"/>
                                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="meditateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Era-81-B3e"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이름 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jI-wV-J5M">
                                                 <rect key="frame" x="173" y="0.0" width="150" height="38"/>
@@ -189,7 +192,8 @@
                     </view>
                     <connections>
                         <outlet property="bibleVerseContainerView" destination="UaO-ST-mh1" id="wIl-m4-Vlq"/>
-                        <outlet property="bibleVerseShareButton" destination="qn9-hR-xY0" id="u9h-Em-WCi"/>
+                        <outlet property="bibleVerseShareButton" destination="qn9-hR-xY0" id="Him-mb-78g"/>
+                        <outlet property="bibleVerseVStackView" destination="4Ph-HS-TtV" id="TH9-K5-iDs"/>
                         <outlet property="nameTextField" destination="4jI-wV-J5M" id="lhh-g7-k6U"/>
                     </connections>
                 </viewController>
