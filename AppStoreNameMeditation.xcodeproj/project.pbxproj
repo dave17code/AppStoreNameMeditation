@@ -11,10 +11,10 @@
 		DA156D252BEDC53600115A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D242BEDC53600115A5F /* AppDelegate.swift */; };
 		DA156D272BEDC53600115A5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D262BEDC53600115A5F /* SceneDelegate.swift */; };
 		DA156D292BEDC53600115A5F /* BibleTapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D282BEDC53600115A5F /* BibleTapVC.swift */; };
-		DA156D2C2BEDC53600115A5F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DA156D2B2BEDC53600115A5F /* Base */; };
 		DA156D2E2BEDC53700115A5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA156D2D2BEDC53700115A5F /* Assets.xcassets */; };
 		DA156D312BEDC53700115A5F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DA156D302BEDC53700115A5F /* Base */; };
 		DA156D3C2BEDC8F600115A5F /* BMYEONSUNG_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA156D3B2BEDC8F600115A5F /* BMYEONSUNG_otf.otf */; };
+		DA40CBE52BF8229D00227FB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA156D2A2BEDC53600115A5F /* Main.storyboard */; };
 		DAE6938A2BF4D492001DD61A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE693892BF4D492001DD61A /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -143,9 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA156D3C2BEDC8F600115A5F /* BMYEONSUNG_otf.otf in Resources */,
+				DA40CBE52BF8229D00227FB6 /* Main.storyboard in Resources */,
 				DA156D2E2BEDC53700115A5F /* Assets.xcassets in Resources */,
 				DA156D312BEDC53700115A5F /* Base in Resources */,
-				DA156D2C2BEDC53600115A5F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

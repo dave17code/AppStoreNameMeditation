@@ -12,9 +12,12 @@ class BibleTapVC: UIViewController {
     @IBOutlet weak var bibleVerseContainerView: UIView!
     @IBOutlet var bibleVerseThemeButton: [UIButton]!
     @IBOutlet weak var bibleVerseShareButton: UIButton!
+    @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.layer.cornerRadius = 12
+        nameTextField.layer.borderWidth = 1.2
         bibleVerseContainerView.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
         addSwipeGesture()
