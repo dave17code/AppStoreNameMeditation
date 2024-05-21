@@ -9,8 +9,8 @@ import UIKit
 
 class NameMeditationVC: UIViewController {
     
-    var selectedVerseKey: String = "시편 23:1-3" // 선택된 성경 구절 키
-        var selectedVerseIndex: Int = 0 // 선택된 성경 구절 인덱스
+    var selectedVerseKey: String = "시편 23:1-3"
+    var selectedVerseIndex: Int = 0
     
     @IBOutlet weak var bibleVerseContainerView: UIView!
     @IBOutlet weak var bibleVerseVStackView: UIStackView!
@@ -25,37 +25,36 @@ class NameMeditationVC: UIViewController {
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
         bibleVerseContainerView.layer.cornerRadius = 12
-        setUpBibleVersePopupMenu()
+        setUpBibleVersePopUpMenu()
     }
     
     @IBAction func meditateButton(_ sender: Any) {
         if let userName = nameTextField.text {
             BibleVerseModel.shared.userName = userName
-            if let verse = BibleVerseModel.shared.getBibleVerse(selectedVerseIndex, "\(bibleVerseButton.titleLabel?.text ?? "")") {
-                bibleVerseLabel.setTextWithFadeAnimation(verse, duration: 1.0)
+            if let verseTuple = BibleVerseModel.shared.getBibleVerse(selectedVerseIndex, selectedVerseKey) {
+                bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
+                bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
             }
         }
     }
     
-    func setUpBibleVersePopupMenu() {
-          let psalmAction = UIAction(title: "시편 23:1-3", state: selectedVerseKey == "시편 23:1-3" ? .on : .off) { action in
-              self.selectedVerseKey = "시편 23:1-3"
-              self.selectedVerseIndex = 0
-              self.updateBibleVerseButtonTitle()
-              self.setUpBibleVersePopupMenu() // 메뉴를 다시 설정하여 체크 표시 업데이트
-          }
-          
-          let isaiahAction = UIAction(title: "이사야 40:31", state: selectedVerseKey == "이사야 40:31" ? .on : .off) { action in
-              self.selectedVerseKey = "이사야 40:31"
-              self.selectedVerseIndex = 1
-              self.updateBibleVerseButtonTitle()
-              self.setUpBibleVersePopupMenu() // 메뉴를 다시 설정하여 체크 표시 업데이트
-          }
-          
-          let menu = UIMenu(title: "성경 구절 선택", options: .displayInline, children: [psalmAction, isaiahAction])
-          bibleVerseButton.menu = menu
-          bibleVerseButton.showsMenuAsPrimaryAction = true
-      }
+    func setUpBibleVersePopUpMenu() {
+        let psalmAction = UIAction(title: "시편 23:1-3", state: selectedVerseKey == "시편 23:1-3" ? .on : .off) { action in
+            self.selectedVerseKey = "시편 23:1-3"
+            self.selectedVerseIndex = 0
+            self.updateBibleVerseButtonTitle()
+            self.setUpBibleVersePopUpMenu() // 메뉴를 다시 설정하여 체크 표시 업데이트
+        }
+        let isaiahAction = UIAction(title: "이사야 40:31", state: selectedVerseKey == "이사야 40:31" ? .on : .off) { action in
+            self.selectedVerseKey = "이사야 40:31"
+            self.selectedVerseIndex = 1
+            self.updateBibleVerseButtonTitle()
+            self.setUpBibleVersePopUpMenu() // 메뉴를 다시 설정하여 체크 표시 업데이트
+        }
+        let menu = UIMenu(title: "성경 구절 선택", options: .displayInline, children: [psalmAction, isaiahAction])
+        bibleVerseButton.menu = menu
+        bibleVerseButton.showsMenuAsPrimaryAction = true
+    }
     
     func updateBibleVerseButtonTitle() {
         let customFont = UIFont(name: "BMYEONSUNG-OTF", size: 17) ?? UIFont.systemFont(ofSize: 17)

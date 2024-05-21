@@ -17,10 +17,11 @@ struct BibleVerseModel {
         ["이사야 40:31": "오직 여호와를 앙망하는 name은 새 힘을 얻으리니 독수리가 날개치며 올라감 같을 것이요. 달음박질하여도 곤비치 아니하겠고, 걸어가도 피곤치 아니하리로다."]
     ]
     
-    func getBibleVerse(_ index: Int, _ key: String) -> String? {
+    func getBibleVerse(_ index: Int, _ key: String) -> (key: String, value: String)? {
         guard let template = bibleVerseDictionary[index][key] else {
             return nil
         }
-        return template.replacingOccurrences(of: "name", with: userName)
+        let verse = template.replacingOccurrences(of: "name", with: userName)
+        return (key, verse)
     }
 }
