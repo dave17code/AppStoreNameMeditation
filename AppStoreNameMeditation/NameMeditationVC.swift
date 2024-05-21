@@ -51,7 +51,7 @@ class NameMeditationVC: UIViewController {
             self.updateBibleVerseButtonTitle()
             self.setUpBibleVersePopUpMenu() // 메뉴를 다시 설정하여 체크 표시 업데이트
         }
-        let menu = UIMenu(title: "성경 구절 선택", options: .displayInline, children: [psalmAction, isaiahAction])
+        let menu = UIMenu(title: "성경 말씀 선택", options: .displayInline, children: [psalmAction, isaiahAction])
         bibleVerseButton.menu = menu
         bibleVerseButton.showsMenuAsPrimaryAction = true
     }
