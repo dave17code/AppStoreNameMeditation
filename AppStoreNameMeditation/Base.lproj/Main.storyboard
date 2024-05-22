@@ -25,8 +25,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaO-ST-mh1">
                                 <rect key="frame" x="26" y="50" width="323" height="458"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-HS-TtV">
-                                        <rect key="frame" x="30" y="161" width="263" height="136"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-HS-TtV">
+                                        <rect key="frame" x="30" y="153.5" width="263" height="151"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sF-bv-Zl3">
                                                 <rect key="frame" x="0.0" y="0.0" width="263" height="100.5"/>
@@ -40,8 +40,8 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 성경 말씀 -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-T4-WZl">
-                                                <rect key="frame" x="0.0" y="116.5" width="263" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성경 말씀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-T4-WZl">
+                                                <rect key="frame" x="0.0" y="131.5" width="263" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="16"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -165,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="-332"/>
+            <point key="canvasLocation" x="679" y="-612"/>
         </scene>
     </scenes>
     <resources>

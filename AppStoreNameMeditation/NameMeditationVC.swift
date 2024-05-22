@@ -43,15 +43,21 @@ class NameMeditationVC: UIViewController {
             self.selectedVerseKey = "시편 23:1-3"
             self.selectedVerseIndex = 0
             self.updateBibleVerseButtonTitle()
-            self.setUpBibleVersePopUpMenu() // 메뉴를 다시 설정하여 체크 표시 업데이트
+            self.setUpBibleVersePopUpMenu()
         }
-        let isaiahAction = UIAction(title: "이사야 40:31", state: selectedVerseKey == "이사야 40:31" ? .on : .off) { action in
+        let isaiahFirst = UIAction(title: "이사야 40:31", state: selectedVerseKey == "이사야 40:31" ? .on : .off) { action in
             self.selectedVerseKey = "이사야 40:31"
             self.selectedVerseIndex = 1
             self.updateBibleVerseButtonTitle()
-            self.setUpBibleVersePopUpMenu() // 메뉴를 다시 설정하여 체크 표시 업데이트
+            self.setUpBibleVersePopUpMenu()
         }
-        let menu = UIMenu(title: "성경 말씀 선택", options: .displayInline, children: [psalmAction, isaiahAction])
+        let isaiahSecond = UIAction(title: "이사야 41:10", state: selectedVerseKey == "이사야 41:10" ? .on : .off) { action in
+            self.selectedVerseKey = "이사야 41:10"
+            self.selectedVerseIndex = 2
+            self.updateBibleVerseButtonTitle()
+            self.setUpBibleVersePopUpMenu()
+        }
+        let menu = UIMenu(title: "성경 말씀 선택", options: .displayInline, children: [psalmAction, isaiahFirst, isaiahSecond])
         bibleVerseButton.menu = menu
         bibleVerseButton.showsMenuAsPrimaryAction = true
     }
