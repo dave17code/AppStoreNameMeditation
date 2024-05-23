@@ -14,6 +14,7 @@
 		DA156D312BEDC53700115A5F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DA156D302BEDC53700115A5F /* Base */; };
 		DA156D3C2BEDC8F600115A5F /* BMYEONSUNG_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA156D3B2BEDC8F600115A5F /* BMYEONSUNG_otf.otf */; };
 		DA40CBE52BF8229D00227FB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA156D2A2BEDC53600115A5F /* Main.storyboard */; };
+		DA7FD6F62BFEE7250027A6AB /* BibleVerseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7FD6F52BFEE7250027A6AB /* BibleVerseVC.swift */; };
 		DAE6938A2BF4D492001DD61A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE693892BF4D492001DD61A /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		DA156D302BEDC53700115A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA156D322BEDC53700115A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA156D3B2BEDC8F600115A5F /* BMYEONSUNG_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMYEONSUNG_otf.otf; sourceTree = "<group>"; };
+		DA7FD6F52BFEE7250027A6AB /* BibleVerseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVerseVC.swift; sourceTree = "<group>"; };
 		DAE693892BF4D492001DD61A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				DA156D242BEDC53600115A5F /* AppDelegate.swift */,
 				DA156D262BEDC53600115A5F /* SceneDelegate.swift */,
 				DA156D282BEDC53600115A5F /* NameMeditationVC.swift */,
+				DA7FD6F52BFEE7250027A6AB /* BibleVerseVC.swift */,
 				DAE693892BF4D492001DD61A /* Model.swift */,
 				DA156D2A2BEDC53600115A5F /* Main.storyboard */,
 				DA156D2D2BEDC53700115A5F /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 			files = (
 				DAE6938A2BF4D492001DD61A /* Model.swift in Sources */,
 				DA156D292BEDC53600115A5F /* NameMeditationVC.swift in Sources */,
+				DA7FD6F62BFEE7250027A6AB /* BibleVerseVC.swift in Sources */,
 				DA156D252BEDC53600115A5F /* AppDelegate.swift in Sources */,
 				DA156D272BEDC53600115A5F /* SceneDelegate.swift in Sources */,
 			);

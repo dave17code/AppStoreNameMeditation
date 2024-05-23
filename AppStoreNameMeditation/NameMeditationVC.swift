@@ -9,8 +9,9 @@ import UIKit
 
 class NameMeditationVC: UIViewController {
     
-    var selectedVerseKey: String = "시편 23:1-3"
-    var selectedVerseIndex: Int = 0
+//    var selectedVerseKey: String = "시편 23:1-3"
+//    var selectedVerseIndex: Int = 0
+    var bibleVerse: [String] = ["시편 23:1-3", "이사야 40:31", "이사야 41:10"]
     
     @IBOutlet weak var bibleVerseContainerView: UIView!
     @IBOutlet weak var bibleVerseVStackView: UIStackView!
@@ -25,51 +26,60 @@ class NameMeditationVC: UIViewController {
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
         bibleVerseContainerView.layer.cornerRadius = 12
-        setUpBibleVersePopUpMenu()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     @IBAction func meditateButton(_ sender: Any) {
-        if let userName = nameTextField.text {
-            BibleVerseModel.shared.userName = userName
-            if let verseTuple = BibleVerseModel.shared.getBibleVerse(selectedVerseIndex, selectedVerseKey) {
-                bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
-                bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
+        if nameTextField.text?.isEmpty == true {
+            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
+            let dictionary = BibleVerseModel.shared.originalBibleVerseDictionary
+            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
+                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
+                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
+            }
+        } else {
+            if let userName = nameTextField.text {
+                BibleVerseModel.shared.userName = userName
+                let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+                let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
+                
+                if let verseTuple = BibleVerseModel.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
+                    bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
+                    bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
+                }
             }
         }
     }
     
-    func setUpBibleVersePopUpMenu() {
-        let psalmAction = UIAction(title: "시편 23:1-3", state: selectedVerseKey == "시편 23:1-3" ? .on : .off) { action in
-            self.selectedVerseKey = "시편 23:1-3"
-            self.selectedVerseIndex = 0
-            self.updateBibleVerseButtonTitle()
-            self.setUpBibleVersePopUpMenu()
-        }
-        let isaiahFirst = UIAction(title: "이사야 40:31", state: selectedVerseKey == "이사야 40:31" ? .on : .off) { action in
-            self.selectedVerseKey = "이사야 40:31"
-            self.selectedVerseIndex = 1
-            self.updateBibleVerseButtonTitle()
-            self.setUpBibleVersePopUpMenu()
-        }
-        let isaiahSecond = UIAction(title: "이사야 41:10", state: selectedVerseKey == "이사야 41:10" ? .on : .off) { action in
-            self.selectedVerseKey = "이사야 41:10"
-            self.selectedVerseIndex = 2
-            self.updateBibleVerseButtonTitle()
-            self.setUpBibleVersePopUpMenu()
-        }
-        let menu = UIMenu(title: "성경 말씀 선택", options: .displayInline, children: [psalmAction, isaiahFirst, isaiahSecond])
-        bibleVerseButton.menu = menu
-        bibleVerseButton.showsMenuAsPrimaryAction = true
+    @IBAction func bibleVerseButton(_ sender: Any) {
+        let bibleVerseVC = BibleVerseVC()
+        bibleVerseVC.items = bibleVerse
+        bibleVerseVC.delegate = self
+        bibleVerseVC.modalPresentationStyle = .formSheet
+        present(bibleVerseVC, animated: true, completion: nil)
     }
-    
+
     func updateBibleVerseButtonTitle() {
         let customFont = UIFont(name: "BMYEONSUNG-OTF", size: 17) ?? UIFont.systemFont(ofSize: 17)
         let attributes: [NSAttributedString.Key: Any] = [
             .font: customFont,
             .foregroundColor: UIColor.white
         ]
+        let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? "시편 23:1-3"
         let attributedTitle = NSAttributedString(string: selectedVerseKey, attributes: attributes)
         bibleVerseButton.setAttributedTitle(attributedTitle, for: .normal)
+    }
+}
+
+extension NameMeditationVC: BibleVerseVCDelegate {
+    func didSelectBibleVerse(key: String, index: Int) {
+        UserDefaults.standard.set(key, forKey: "selectedVerseKey")
+        UserDefaults.standard.set(index, forKey: "selectedVerseIndex")
+        updateBibleVerseButtonTitle()
     }
 }
 
