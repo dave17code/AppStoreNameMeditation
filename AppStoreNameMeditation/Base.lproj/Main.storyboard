@@ -84,6 +84,9 @@
                                                 <rect key="frame" x="173" y="0.0" width="150" height="38"/>
                                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="nameTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="lQi-iW-5pZ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>

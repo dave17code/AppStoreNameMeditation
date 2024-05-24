@@ -12,19 +12,14 @@ protocol BibleVerseVCDelegate: AnyObject {
 }
 
 class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var items: [String] = []
+    var bibleVerseChapter: [String] = []
     weak var delegate: BibleVerseVCDelegate? // 델리게이트 프로퍼티 추가
     private let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 상단 모서리 둥글게 설정 및 clipsToBounds 활성화
-        view.layer.cornerRadius = 12
-        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        view.clipsToBounds = true
         // BibleVerseModel 싱글톤에서 데이터를 가져와서 items 배열을 초기화합니다.
-        items = BibleVerseModel.shared.originalBibleVerseDictionary.map { $0.keys.first ?? "" }
+        bibleVerseChapter = BibleVerseModel.shared.originalBibleVerseDictionary.map { $0.keys.first ?? "" }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -53,28 +48,21 @@ class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.tableHeaderView = headerView
     }
     
-    func updatePreferredContentSize() {
-        let width = view.frame.width * 0.6
-        let height = view.frame.height * 0.8
-        preferredContentSize = CGSize(width: width, height: height)
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return BibleVerseModel.shared.originalBibleVerseDictionary.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let customFont = UIFont(name: "BMYEONSUNG-OTF", size: 17) ?? UIFont.systemFont(ofSize: 17)
         cell.textLabel?.font = customFont
-        cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.text = bibleVerseChapter[indexPath.row]
         cell.textLabel?.textAlignment = .center
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedItem = items[indexPath.row]
-        
+        let selectedItem = bibleVerseChapter[indexPath.row]
         // 선택한 성경 구절을 유저디폴트에 저장
         UserDefaults.standard.set(selectedItem, forKey: "selectedVerseKey")
         UserDefaults.standard.set(indexPath.row, forKey: "selectedVerseIndex")
