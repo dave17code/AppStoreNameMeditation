@@ -22,7 +22,6 @@ class NameMeditationVC: UIViewController {
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
         bibleVerseContainerView.layer.cornerRadius = 12
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

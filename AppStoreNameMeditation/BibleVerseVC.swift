@@ -18,8 +18,9 @@ class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // BibleVerseModel 싱글톤에서 데이터를 가져와서 items 배열을 초기화합니다.
-        bibleVerseChapter = BibleVerseModel.shared.originalBibleVerseDictionary.map { $0.keys.first ?? "" }
+        bibleVerseChapter = BibleVerseModel.shared.originalBibleVerseDictionary.map {
+            $0.keys.first ?? ""
+        }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -54,10 +55,36 @@ class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let customFont = UIFont(name: "BMYEONSUNG-OTF", size: 17) ?? UIFont.systemFont(ofSize: 17)
-        cell.textLabel?.font = customFont
-        cell.textLabel?.text = bibleVerseChapter[indexPath.row]
-        cell.textLabel?.textAlignment = .center
+        // 기존의 체크마크 이미지뷰와 라벨 제거
+        for subview in cell.contentView.subviews {
+            subview.removeFromSuperview()
+        }
+        // 라벨 생성 및 설정
+        let label = UILabel()
+        label.text = bibleVerseChapter[indexPath.row]
+        label.font = UIFont(name: "BMYEONSUNG-OTF", size: 17)
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        cell.contentView.addSubview(label)
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor)
+        ])
+        // 현재 선택된 구절 인덱스를 유저디폴트에서 가져와서 체크마크 표시
+        let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+        if indexPath.row == selectedVerseIndex {
+            let checkmarkImage = UIImage(systemName: "checkmark.seal.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.black)
+            let checkmarkImageView = UIImageView(image: checkmarkImage)
+            checkmarkImageView.translatesAutoresizingMaskIntoConstraints = false
+            cell.contentView.addSubview(checkmarkImageView)
+            
+            NSLayoutConstraint.activate([
+                checkmarkImageView.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor, constant: -1),
+                checkmarkImageView.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 17),
+                checkmarkImageView.widthAnchor.constraint(equalToConstant: 22),
+                checkmarkImageView.heightAnchor.constraint(equalToConstant: 19)
+            ])
+        }
         return cell
     }
     
