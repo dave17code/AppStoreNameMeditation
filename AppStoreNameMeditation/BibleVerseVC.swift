@@ -77,7 +77,6 @@ class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             let checkmarkImageView = UIImageView(image: checkmarkImage)
             checkmarkImageView.translatesAutoresizingMaskIntoConstraints = false
             cell.contentView.addSubview(checkmarkImageView)
-            
             NSLayoutConstraint.activate([
                 checkmarkImageView.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor, constant: -1),
                 checkmarkImageView.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 17),
