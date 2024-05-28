@@ -22,6 +22,17 @@ class NameMeditationVC: UIViewController {
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
         bibleVerseContainerView.layer.cornerRadius = 12
+        
+        // 모든 폰트 패밀리 이름을 가져옵니다.
+        let fontFamilies = UIFont.familyNames
+        for family in fontFamilies {
+            print("Font family: \(family)")
+            // 해당 폰트 패밀리에 포함된 모든 폰트 이름을 가져옵니다.
+            let fontNames = UIFont.fontNames(forFamilyName: family)
+            for fontName in fontNames {
+                print("Font name: \(fontName)")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,7 +94,11 @@ class NameMeditationVC: UIViewController {
         bibleVerseVC.modalPresentationStyle = .formSheet
         present(bibleVerseVC, animated: true, completion: nil)
     }
-
+    
+    @IBAction func fontButton(_ sender: Any) {
+        
+    }
+    
     func updateBibleVerseButtonTitle() {
         let customFont = UIFont(name: "BMYEONSUNG-OTF", size: 17) ?? UIFont.systemFont(ofSize: 17)
         let attributes: [NSAttributedString.Key: Any] = [
