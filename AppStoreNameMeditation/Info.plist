@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>BMYEONSUNG_otf.otf</string>
+		<string>MangoDdobak-R(otf).otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

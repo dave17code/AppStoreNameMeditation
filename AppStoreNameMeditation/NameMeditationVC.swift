@@ -76,6 +76,7 @@ class NameMeditationVC: UIViewController {
             let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
             let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
             if let verseTuple = BibleVerseModel.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
+                bibleVerseLabel.font = UIFont(name: "MangoDdobak-R", size: 23)
                 bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
                 bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
             }
@@ -96,7 +97,9 @@ class NameMeditationVC: UIViewController {
     }
     
     @IBAction func fontButton(_ sender: Any) {
-        
+        let fontVC = FontVC()
+        fontVC.modalPresentationStyle = .formSheet
+        present(fontVC, animated: true, completion: nil)
     }
     
     func updateBibleVerseButtonTitle() {
@@ -126,5 +129,19 @@ extension UILabel {
         UIView.animate(withDuration: duration) {
             self.alpha = 1.0
         }
+    }
+    func setLineSpacing(lineSpacing: CGFloat) {
+        guard let labelText = self.text else { return }
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = lineSpacing
+        
+        let attributedString: NSMutableAttributedString
+        if let attributedText = self.attributedText {
+            attributedString = NSMutableAttributedString(attributedString: attributedText)
+        } else {
+            attributedString = NSMutableAttributedString(string: labelText)
+        }
+        attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+        self.attributedText = attributedString
     }
 }
