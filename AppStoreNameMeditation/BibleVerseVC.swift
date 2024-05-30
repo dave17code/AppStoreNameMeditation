@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol BibleVerseVCDelegate: AnyObject {
+    func didSelectBibleVerse(key: String, index: Int)
+}
+
 class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var delegate: BibleVerseVCDelegate?
     var bibleVerseChapter: [String] = []
     private let tableView = UITableView()
     
@@ -88,6 +93,7 @@ class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         // 선택한 성경 구절을 유저디폴트에 저장
         UserDefaults.standard.set(selectedItem, forKey: "selectedVerseKey")
         UserDefaults.standard.set(indexPath.row, forKey: "selectedVerseIndex")
+        delegate?.didSelectBibleVerse(key: selectedItem, index: indexPath.row)
         dismiss(animated: true, completion: nil)
     }
 }
