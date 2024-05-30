@@ -8,15 +8,12 @@
 import UIKit
 
 class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var bibleVerseChapter: [String] = []
-    weak var delegate: BibleVerseVCDelegate? // 델리게이트 프로퍼티 추가
+    var font: [String] = []
     private let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bibleVerseChapter = BibleVerseModel.shared.originalBibleVerseDictionary.map {
-            $0.keys.first ?? ""
-        }
+        font = Model.shared.font
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -46,7 +43,7 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BibleVerseModel.shared.originalBibleVerseDictionary.count
+        return Model.shared.originalBibleVerseDictionary.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +54,7 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         // 라벨 생성 및 설정
         let label = UILabel()
-        label.text = bibleVerseChapter[indexPath.row]
+        label.text = font[indexPath.row]
         label.font = UIFont(name: "BMYEONSUNG-OTF", size: 17)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false

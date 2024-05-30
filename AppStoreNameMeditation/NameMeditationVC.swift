@@ -59,6 +59,10 @@ class NameMeditationVC: UIViewController {
                 bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
             }
         }
+        // 유저디폴트에 폰트 값이 없으면 기본 폰트를 설정
+        if UserDefaults.standard.string(forKey: "selectedFont") == nil {
+            UserDefaults.standard.set("BMYEONSUNG-OTF", forKey: "selectedFont")
+        }
     }
     
     @IBAction func meditateButton(_ sender: Any) {
@@ -67,7 +71,9 @@ class NameMeditationVC: UIViewController {
             let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
             let dictionary = BibleVerseModel.shared.originalBibleVerseDictionary
             if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
+                bibleVerseLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "selectedFont")!, size: 23)
                 bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
+                bibleVerseChapterLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "selectedFont")!, size: 16)
                 bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
             }
         } else {
@@ -76,8 +82,9 @@ class NameMeditationVC: UIViewController {
             let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
             let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
             if let verseTuple = BibleVerseModel.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
-                bibleVerseLabel.font = UIFont(name: "MangoDdobak-R", size: 23)
+                bibleVerseLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "selectedFont")!, size: 23)
                 bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
+                bibleVerseChapterLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "selectedFont")!, size: 16)
                 bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
             }
         }

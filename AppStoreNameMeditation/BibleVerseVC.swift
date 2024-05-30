@@ -18,7 +18,7 @@ class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bibleVerseChapter = BibleVerseModel.shared.originalBibleVerseDictionary.map {
+        bibleVerseChapter = Model.shared.originalBibleVerseDictionary.map {
             $0.keys.first ?? ""
         }
         tableView.delegate = self
@@ -50,7 +50,7 @@ class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BibleVerseModel.shared.originalBibleVerseDictionary.count
+        return Model.shared.originalBibleVerseDictionary.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
