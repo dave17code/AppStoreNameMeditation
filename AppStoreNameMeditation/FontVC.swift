@@ -8,7 +8,8 @@
 import UIKit
 
 class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var font: [String] = []
+    
+    var font: [(fontName: String, displayName: String)] = []
     private let tableView = UITableView()
     
     override func viewDidLoad() {
@@ -43,7 +44,7 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Model.shared.originalBibleVerseDictionary.count
+        return Model.shared.font.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,8 +55,9 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         // 라벨 생성 및 설정
         let label = UILabel()
-        label.text = font[indexPath.row]
-        label.font = UIFont(name: "BMYEONSUNG-OTF", size: 17)
+        let font = Model.shared.font[indexPath.row]
+        label.font = UIFont(name: font.fontName, size: 17)
+        label.text = font.displayName
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         cell.contentView.addSubview(label)
@@ -63,9 +65,9 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             label.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor)
         ])
-        // 현재 선택된 구절 인덱스를 유저디폴트에서 가져와서 체크마크 표시
-        let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-        if indexPath.row == selectedVerseIndex {
+        // 현재 선택된 폰트를 유저디폴트에서 가져와서 체크마크 표시
+        let selectedFont = UserDefaults.standard.string(forKey: "selectedFont") ?? "BMYEONSUNG-OTF"
+        if font.fontName == selectedFont {
             let checkmarkImage = UIImage(systemName: "checkmark.seal.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.black)
             let checkmarkImageView = UIImageView(image: checkmarkImage)
             checkmarkImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -81,12 +83,9 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedItem = bibleVerseChapter[indexPath.row]
-        // 선택한 성경 구절을 유저디폴트에 저장
-        UserDefaults.standard.set(selectedItem, forKey: "selectedVerseKey")
-        UserDefaults.standard.set(indexPath.row, forKey: "selectedVerseIndex")
-        // 델리게이트 메서드 호출
-        delegate?.didSelectBibleVerse(key: selectedItem, index: indexPath.row)
+        let selectedFont = Model.shared.font[indexPath.row]
+        // 선택한 폰트를 유저디폴트에 저장
+        UserDefaults.standard.set(selectedFont.fontName, forKey: "selectedFont")
         dismiss(animated: true, completion: nil)
     }
 }

@@ -78,7 +78,7 @@
                                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="meditateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Era-81-B3e"/>
+                                                    <action selector="meditateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yPp-mu-W7n"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이름 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jI-wV-J5M">
@@ -115,7 +115,7 @@
                                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="bibleVerseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qnp-vD-sYJ"/>
+                                                    <action selector="bibleVerseChoiceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoZ-rX-rs2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJq-9n-a3k">
@@ -141,7 +141,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="fontButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3x9-Ra-6Yo"/>
+                                                    <action selector="fontChoiceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TmL-6f-OCR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -165,11 +165,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bibleVerseButton" destination="0ch-Ov-Grg" id="5kO-If-UTv"/>
                         <outlet property="bibleVerseChapterLabel" destination="CH6-T4-WZl" id="aeI-Xc-Aus"/>
+                        <outlet property="bibleVerseChoiceButton" destination="0ch-Ov-Grg" id="i6b-Kb-6Ct"/>
                         <outlet property="bibleVerseContainerView" destination="UaO-ST-mh1" id="wIl-m4-Vlq"/>
                         <outlet property="bibleVerseLabel" destination="5sF-bv-Zl3" id="JOE-I9-w8n"/>
                         <outlet property="bibleVerseVStackView" destination="4Ph-HS-TtV" id="TH9-K5-iDs"/>
+                        <outlet property="fontChoiceButton" destination="PJq-9n-a3k" id="43l-xk-lSA"/>
+                        <outlet property="meditateButton" destination="jAd-0U-kEy" id="Tzk-QK-AYI"/>
                         <outlet property="nameTextField" destination="4jI-wV-J5M" id="lhh-g7-k6U"/>
                     </connections>
                 </viewController>
