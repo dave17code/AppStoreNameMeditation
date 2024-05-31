@@ -9,6 +9,8 @@ import UIKit
 
 class NameMeditationVC: UIViewController {
     
+    let meditationIndicator = UIImageView()
+    
     @IBOutlet weak var bibleVerseContainerView: UIView!
     @IBOutlet weak var bibleVerseVStackView: UIStackView!
     @IBOutlet weak var bibleVerseLabel: UILabel!
@@ -24,6 +26,7 @@ class NameMeditationVC: UIViewController {
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
         bibleVerseContainerView.layer.cornerRadius = 12
+        setUpMeditationIndicator()
         let fontFamilies = UIFont.familyNames
         for family in fontFamilies {
             print("Font family: \(family)")
@@ -47,31 +50,35 @@ class NameMeditationVC: UIViewController {
         super.viewWillAppear(animated)
         updateBibleVerseChoiceButtonTitle()
         updateFont()
-        if let userName = UserDefaults.standard.string(forKey: "userName") {
-            nameTextField.text = userName
-        }
-        if nameTextField.text?.isEmpty == true {
-            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-            let dictionary = Model.shared.originalBibleVerseDictionary
-            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
-                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
-                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
-            }
-        } else {
-            if let userName = nameTextField.text {
-                Model.shared.userName = userName
-                let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-                let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-                if let verseTuple = Model.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
-                    bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
-                    bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
-                }
-            }
+//        if let userName = UserDefaults.standard.string(forKey: "userName") {
+//            nameTextField.text = userName
+//        }
+//        if nameTextField.text?.isEmpty == true {
+//            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+//            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
+//            let dictionary = Model.shared.originalBibleVerseDictionary
+//            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
+//                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
+//                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
+//            }
+//        } else {
+//            if let userName = nameTextField.text {
+//                Model.shared.userName = userName
+//                let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+//                let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
+//                if let verseTuple = Model.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
+//                    bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
+//                    bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
+//                }
+//            }
+//        }
+        if bibleVerseChapterLabel.text != bibleVerseChoiceButton.currentTitle {
+            meditationIndicatorAnimation()
         }
     }
     
     @IBAction func meditateButton(_ sender: Any) {
+        meditationIndicator.isHidden = true
         if nameTextField.text?.isEmpty == true {
             let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
             let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
@@ -97,6 +104,7 @@ class NameMeditationVC: UIViewController {
     }
     
     @IBAction func nameTextField(_ sender: Any) {
+        meditationIndicatorAnimation()
         if let userName = nameTextField.text {
             UserDefaults.standard.set(userName, forKey: "userName")
         }
@@ -114,6 +122,35 @@ class NameMeditationVC: UIViewController {
         fontVC.modalPresentationStyle = .fullScreen
         fontVC.delegate = self
         present(fontVC, animated: true, completion: nil)
+    }
+    
+    func setUpMeditationIndicator() {
+        meditationIndicator.translatesAutoresizingMaskIntoConstraints = false
+        meditationIndicator.image = UIImage(systemName: "arrowtriangle.down.fill")
+        meditationIndicator.tintColor = .black
+        meditationIndicator.isHidden = true
+        view.addSubview(meditationIndicator)
+        NSLayoutConstraint.activate([
+            meditationIndicator.widthAnchor.constraint(equalToConstant: 20),
+            meditationIndicator.heightAnchor.constraint(equalToConstant: 17),
+            meditationIndicator.centerXAnchor.constraint(equalTo: meditateButton.centerXAnchor),
+            meditationIndicator.bottomAnchor.constraint(equalTo: meditateButton.topAnchor, constant: -5)
+        ])
+    }
+    
+    func meditationIndicatorAnimation() {
+        meditationIndicator.isHidden = false
+        UIView.animate(withDuration: 0.5, animations: {
+            self.meditationIndicator.transform = CGAffineTransform(translationX: 0, y: -8)
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.meditationIndicator.transform = .identity
+            }, completion: { _ in
+                if !self.meditationIndicator.isHidden {
+                    self.meditationIndicatorAnimation() // 애니메이션 반복
+                }
+            })
+        })
     }
     
     func updateBibleVerseChoiceButtonTitle() {
