@@ -11,7 +11,7 @@ protocol BibleVerseVCDelegate: AnyObject {
     func didSelectBibleVerse(key: String, index: Int)
 }
 
-class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var delegate: BibleVerseVCDelegate?
     var bibleVerseChapter: [String] = []
@@ -63,7 +63,7 @@ class BibleVerseVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         // 라벨 생성 및 설정
         let label = UILabel()
         label.text = bibleVerseChapter[indexPath.row]
-        label.font = UIFont(name: "BMYEONSUNG-OTF", size: 17)
+        label.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: 17)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         cell.contentView.addSubview(label)

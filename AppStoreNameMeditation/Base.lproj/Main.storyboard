@@ -28,7 +28,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-HS-TtV">
                                         <rect key="frame" x="30" y="146" width="263" height="166"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sF-bv-Zl3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sF-bv-Zl3">
                                                 <rect key="frame" x="0.0" y="0.0" width="263" height="104.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="말씀톡 프로젝트 시작 천천히 차근차근 기대가 됩니다 고객 만족을 위해서 나아갑니다 길이  ">
@@ -74,7 +74,7 @@
                                                 </state>
                                                 <buttonConfiguration key="configuration" style="filled" title="묵상하기">
                                                     <backgroundConfiguration key="background" cornerRadius="12"/>
-                                                    <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM Yeonsung" pointSize="17"/>
+                                                    <fontDescription key="titleFontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                     <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
