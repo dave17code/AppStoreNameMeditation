@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FontVCDelegate: AnyObject {
-    func didSelectFont(fontName: String, displayName: String)
+    func didSelectFont(name: String, displayName: String)
 }
 
 class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -71,7 +71,7 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             label.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor)
         ])
         // 현재 선택된 폰트를 유저디폴트에서 가져와서 체크마크 표시
-        let selectedFont = UserDefaults.standard.string(forKey: "fontName") ?? "BMYEONSUNG-OTF"
+        let selectedFont = UserDefaults.standard.string(forKey: "fontName")!
         if font.fontName == selectedFont {
             let checkmarkImage = UIImage(systemName: "checkmark.seal.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.black)
             let checkmarkImageView = UIImageView(image: checkmarkImage)
@@ -89,8 +89,9 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedFont = Model.shared.font[indexPath.row]
-        // 델리게이트 메서드 호출
-        delegate?.didSelectFont(fontName: selectedFont.fontName, displayName: selectedFont.displayName)
+        UserDefaults.standard.set(selectedFont.fontName, forKey: "fontName")
+        UserDefaults.standard.set(selectedFont.displayName, forKey: "displayFontName")
+        delegate?.didSelectFont(name: selectedFont.fontName, displayName: selectedFont.displayName)
         dismiss(animated: true, completion: nil)
     }
 }
