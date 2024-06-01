@@ -10,6 +10,7 @@ import UIKit
 class NameMeditationVC: UIViewController {
     
     let meditationIndicator = UIImageView()
+    var isAnimating = false // 애니메이션 진행 상태를 추적하는 변수
     
     @IBOutlet weak var bibleVerseContainerView: UIView!
     @IBOutlet weak var bibleVerseVStackView: UIStackView!
@@ -50,35 +51,37 @@ class NameMeditationVC: UIViewController {
         super.viewWillAppear(animated)
         updateBibleVerseChoiceButtonTitle()
         updateFont()
-//        if let userName = UserDefaults.standard.string(forKey: "userName") {
-//            nameTextField.text = userName
-//        }
-//        if nameTextField.text?.isEmpty == true {
-//            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-//            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-//            let dictionary = Model.shared.originalBibleVerseDictionary
-//            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
-//                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
-//                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
-//            }
-//        } else {
-//            if let userName = nameTextField.text {
-//                Model.shared.userName = userName
-//                let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-//                let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-//                if let verseTuple = Model.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
-//                    bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
-//                    bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
-//                }
-//            }
-//        }
-        if bibleVerseChapterLabel.text != bibleVerseChoiceButton.currentTitle {
+        //        if let userName = UserDefaults.standard.string(forKey: "userName") {
+        //            nameTextField.text = userName
+        //        }
+        //        if nameTextField.text?.isEmpty == true {
+        //            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+        //            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
+        //            let dictionary = Model.shared.originalBibleVerseDictionary
+        //            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
+        //                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
+        //                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
+        //            }
+        //        } else {
+        //            if let userName = nameTextField.text {
+        //                Model.shared.userName = userName
+        //                let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+        //                let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
+        //                if let verseTuple = Model.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
+        //                    bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
+        //                    bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
+        //                }
+        //            }
+        //        }
+        if bibleVerseChapterLabel.text != UserDefaults.standard.string(forKey: "selectedVerseKey") {
             meditationIndicatorAnimation()
+        } else {
+            stopMeditationIndicatorAnimation()
         }
     }
     
     @IBAction func meditateButton(_ sender: Any) {
-        meditationIndicator.isHidden = true
+        stopMeditationIndicatorAnimation()
         if nameTextField.text?.isEmpty == true {
             let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
             let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
@@ -134,23 +137,39 @@ class NameMeditationVC: UIViewController {
             meditationIndicator.widthAnchor.constraint(equalToConstant: 20),
             meditationIndicator.heightAnchor.constraint(equalToConstant: 17),
             meditationIndicator.centerXAnchor.constraint(equalTo: meditateButton.centerXAnchor),
-            meditationIndicator.bottomAnchor.constraint(equalTo: meditateButton.topAnchor, constant: -5)
+            meditationIndicator.bottomAnchor.constraint(equalTo: meditateButton.topAnchor, constant: -3)
         ])
     }
     
-    func meditationIndicatorAnimation() {
+    func meditationIndicatorAnimation(repeatCount: Int = 10000) {
+        guard !isAnimating else { return } // 애니메이션이 이미 진행 중이면 함수 종료
+        isAnimating = true
         meditationIndicator.isHidden = false
-        UIView.animate(withDuration: 0.5, animations: {
-            self.meditationIndicator.transform = CGAffineTransform(translationX: 0, y: -8)
-        }, completion: { _ in
-            UIView.animate(withDuration: 0.5, animations: {
-                self.meditationIndicator.transform = .identity
-            }, completion: { _ in
-                if !self.meditationIndicator.isHidden {
-                    self.meditationIndicatorAnimation() // 애니메이션 반복
+        DispatchQueue.global().async {
+            for _ in 0..<repeatCount {
+                if !self.isAnimating { break }
+                DispatchQueue.main.async {
+                    UIView.animate(withDuration: 0.6, animations: {
+                        self.meditationIndicator.transform = CGAffineTransform(translationX: 0, y: -5)
+                    }, completion: { _ in
+                        UIView.animate(withDuration: 0.6, animations: {
+                            self.meditationIndicator.transform = .identity
+                        })
+                    })
                 }
-            })
-        })
+                print("Animation")
+                usleep(1000000) // 1초 지연 (애니메이션 시간 포함)
+            }
+            DispatchQueue.main.async {
+                self.isAnimating = false
+            }
+        }
+    }
+    
+    func stopMeditationIndicatorAnimation() {
+        isAnimating = false
+        meditationIndicator.layer.removeAllAnimations()
+        meditationIndicator.isHidden = true
     }
     
     func updateBibleVerseChoiceButtonTitle() {
@@ -189,6 +208,7 @@ extension NameMeditationVC: BibleVerseVCDelegate {
         UserDefaults.standard.set(key, forKey: "selectedVerseKey")
         UserDefaults.standard.set(index, forKey: "selectedVerseIndex")
         updateBibleVerseChoiceButtonTitle()
+        meditationIndicatorAnimation(repeatCount: 10000) // 성경 구절 변경 시 애니메이션 시작
     }
 }
 
