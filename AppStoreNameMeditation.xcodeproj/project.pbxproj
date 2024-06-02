@@ -10,6 +10,9 @@
 		AF5E5BFD2C0C937200B83A3D /* Cafe24Supermagic-Regular-v1.0.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5BFC2C0C937200B83A3D /* Cafe24Supermagic-Regular-v1.0.otf */; };
 		AF5E5C012C0C989300B83A3D /* omyu pretty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C002C0C989300B83A3D /* omyu pretty.ttf */; };
 		AF5E5C052C0C9B4B00B83A3D /* The Jamsil OTF 2 Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C042C0C9B4B00B83A3D /* The Jamsil OTF 2 Light.otf */; };
+		AF5E5C072C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C062C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf */; };
+		AF5E5C0B2C0CA28000B83A3D /* KCC-Chassam.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C0A2C0CA28000B83A3D /* KCC-Chassam.otf */; };
+		AF5E5C0F2C0CA46C00B83A3D /* Dovemayo_wild.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C0E2C0CA46C00B83A3D /* Dovemayo_wild.ttf */; };
 		DA156D252BEDC53600115A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D242BEDC53600115A5F /* AppDelegate.swift */; };
 		DA156D272BEDC53600115A5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D262BEDC53600115A5F /* SceneDelegate.swift */; };
 		DA156D292BEDC53600115A5F /* NameMeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D282BEDC53600115A5F /* NameMeditationVC.swift */; };
@@ -27,6 +30,9 @@
 		AF5E5BFC2C0C937200B83A3D /* Cafe24Supermagic-Regular-v1.0.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cafe24Supermagic-Regular-v1.0.otf"; sourceTree = "<group>"; };
 		AF5E5C002C0C989300B83A3D /* omyu pretty.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "omyu pretty.ttf"; sourceTree = "<group>"; };
 		AF5E5C042C0C9B4B00B83A3D /* The Jamsil OTF 2 Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "The Jamsil OTF 2 Light.otf"; sourceTree = "<group>"; };
+		AF5E5C062C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KimjungchulScript-Regular.otf"; sourceTree = "<group>"; };
+		AF5E5C0A2C0CA28000B83A3D /* KCC-Chassam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KCC-Chassam.otf"; sourceTree = "<group>"; };
+		AF5E5C0E2C0CA46C00B83A3D /* Dovemayo_wild.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dovemayo_wild.ttf; sourceTree = "<group>"; };
 		DA156D212BEDC53600115A5F /* AppStoreNameMeditationp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreNameMeditationp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA156D242BEDC53600115A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA156D262BEDC53600115A5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 				AF5E5BFC2C0C937200B83A3D /* Cafe24Supermagic-Regular-v1.0.otf */,
 				AF5E5C002C0C989300B83A3D /* omyu pretty.ttf */,
 				AF5E5C042C0C9B4B00B83A3D /* The Jamsil OTF 2 Light.otf */,
+				AF5E5C062C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf */,
+				AF5E5C0A2C0CA28000B83A3D /* KCC-Chassam.otf */,
+				AF5E5C0E2C0CA46C00B83A3D /* Dovemayo_wild.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -157,13 +166,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5E5C0B2C0CA28000B83A3D /* KCC-Chassam.otf in Resources */,
 				DA156D3C2BEDC8F600115A5F /* BMYEONSUNG_otf.otf in Resources */,
 				DA40CBE52BF8229D00227FB6 /* Main.storyboard in Resources */,
 				AF5E5BFD2C0C937200B83A3D /* Cafe24Supermagic-Regular-v1.0.otf in Resources */,
 				AF5E5C012C0C989300B83A3D /* omyu pretty.ttf in Resources */,
 				DAF6AD192C06043100DE7CB6 /* MangoDdobak-R(otf).otf in Resources */,
 				DA156D2E2BEDC53700115A5F /* Assets.xcassets in Resources */,
+				AF5E5C072C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf in Resources */,
 				AF5E5C052C0C9B4B00B83A3D /* The Jamsil OTF 2 Light.otf in Resources */,
+				AF5E5C0F2C0CA46C00B83A3D /* Dovemayo_wild.ttf in Resources */,
 				DA156D312BEDC53700115A5F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

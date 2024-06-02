@@ -112,8 +112,8 @@ class NameMeditationVC: UIViewController {
         meditationIndicator.isHidden = true
         view.addSubview(meditationIndicator)
         NSLayoutConstraint.activate([
-            meditationIndicator.widthAnchor.constraint(equalToConstant: 20),
-            meditationIndicator.heightAnchor.constraint(equalToConstant: 17),
+            meditationIndicator.widthAnchor.constraint(equalToConstant: 19),
+            meditationIndicator.heightAnchor.constraint(equalToConstant: 16),
             meditationIndicator.centerXAnchor.constraint(equalTo: meditateButton.centerXAnchor),
             meditationIndicator.bottomAnchor.constraint(equalTo: meditateButton.topAnchor, constant: -3)
         ])
@@ -186,7 +186,7 @@ extension NameMeditationVC: BibleVerseVCDelegate {
         UserDefaults.standard.set(key, forKey: "selectedVerseKey")
         UserDefaults.standard.set(index, forKey: "selectedVerseIndex")
         updateBibleVerseChoiceButtonTitle()
-        meditationIndicatorAnimation(repeatCount: 10000) // 성경 구절 변경 시 애니메이션 시작
+        meditationIndicatorAnimation() // 성경 구절 변경 시 애니메이션 시작
     }
 }
 

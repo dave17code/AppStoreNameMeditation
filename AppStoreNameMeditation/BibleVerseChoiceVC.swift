@@ -38,7 +38,7 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
         headerView.backgroundColor = .black
         let titleLabel = UILabel()
         titleLabel.text = "성경 말씀 선택"
-        titleLabel.font = UIFont(name: "BMYEONSUNG-OTF", size: 19)
+        titleLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: 19)
         titleLabel.textColor = .white
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
