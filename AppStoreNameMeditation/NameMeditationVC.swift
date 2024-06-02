@@ -49,6 +49,9 @@ class NameMeditationVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if UserDefaults.standard.string(forKey: "userName") != nil {
+            nameTextField.text = UserDefaults.standard.string(forKey: "userName")
+        }
         updateBibleVerseChoiceButtonTitle()
         updateFont()
         if bibleVerseChapterLabel.text != UserDefaults.standard.string(forKey: "selectedVerseKey") {
