@@ -51,28 +51,6 @@ class NameMeditationVC: UIViewController {
         super.viewWillAppear(animated)
         updateBibleVerseChoiceButtonTitle()
         updateFont()
-        //        if let userName = UserDefaults.standard.string(forKey: "userName") {
-        //            nameTextField.text = userName
-        //        }
-        //        if nameTextField.text?.isEmpty == true {
-        //            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-        //            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-        //            let dictionary = Model.shared.originalBibleVerseDictionary
-        //            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
-        //                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
-        //                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
-        //            }
-        //        } else {
-        //            if let userName = nameTextField.text {
-        //                Model.shared.userName = userName
-        //                let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-        //                let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-        //                if let verseTuple = Model.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
-        //                    bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
-        //                    bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
-        //                }
-        //            }
-        //        }
         if bibleVerseChapterLabel.text != UserDefaults.standard.string(forKey: "selectedVerseKey") {
             meditationIndicatorAnimation()
         } else {

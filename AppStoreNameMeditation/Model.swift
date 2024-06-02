@@ -24,7 +24,7 @@ struct Model {
         ["이사야 41:10": "두려워하지 말라, 내가 너와 함께 함이니라. 놀라지 말라, 나는 네 하나님이 됨이니라. 내가 너를 굳세게 하리라. 참으로 너를 도와 주리라. 참으로 나의 의로운 오른손으로 너를 붙들리라."]
     ]
     
-    let font: [(fontName: String, displayName: String)] = [("BMYEONSUNG-OTF", "배달의민족 연성체"), ("MangoDdobak-R", "망고보드 또박체")]
+    let font: [(fontName: String, displayName: String)] = [("BMYEONSUNG-OTF", "배달의민족 연성체"), ("MangoDdobak-R", "망고보드 또박체"), ("Cafe24Supermagic-OTF-Regular", "카페24슈퍼매직"), ("omyu_pretty", "오뮤다예쁨체"), ("TheJamsilOTF2Light", "롯데 더잠실체")]
     
     func getNameBibleVerse(_ index: Int, _ key: String) -> (key: String, value: String)? {
         guard let template = nameInBibleVerseDictionary[index][key] else {

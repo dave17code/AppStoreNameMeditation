@@ -80,8 +80,8 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             NSLayoutConstraint.activate([
                 checkmarkImageView.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor, constant: -1),
                 checkmarkImageView.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 17),
-                checkmarkImageView.widthAnchor.constraint(equalToConstant: 22),
-                checkmarkImageView.heightAnchor.constraint(equalToConstant: 19)
+                checkmarkImageView.widthAnchor.constraint(equalToConstant: 19),
+                checkmarkImageView.heightAnchor.constraint(equalToConstant: 17)
             ])
         }
         return cell
