@@ -13,6 +13,10 @@
 		AF5E5C072C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C062C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf */; };
 		AF5E5C0B2C0CA28000B83A3D /* KCC-Chassam.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C0A2C0CA28000B83A3D /* KCC-Chassam.otf */; };
 		AF5E5C0F2C0CA46C00B83A3D /* Dovemayo_wild.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C0E2C0CA46C00B83A3D /* Dovemayo_wild.ttf */; };
+		AFE9EB9D2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EB9C2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf */; };
+		AFE9EBA32C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBA22C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf */; };
+		AFE9EBA52C0DCD1F00CF1956 /* Ownglyph_noocar-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBA42C0DCD1F00CF1956 /* Ownglyph_noocar-Rg.ttf */; };
+		AFE9EBA72C0DCEC000CF1956 /* Ownglyph_jooreeletter-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBA62C0DCEC000CF1956 /* Ownglyph_jooreeletter-Rg.ttf */; };
 		DA156D252BEDC53600115A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D242BEDC53600115A5F /* AppDelegate.swift */; };
 		DA156D272BEDC53600115A5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D262BEDC53600115A5F /* SceneDelegate.swift */; };
 		DA156D292BEDC53600115A5F /* NameMeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D282BEDC53600115A5F /* NameMeditationVC.swift */; };
@@ -39,6 +43,10 @@
 		AF5E5C062C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KimjungchulScript-Regular.otf"; sourceTree = "<group>"; };
 		AF5E5C0A2C0CA28000B83A3D /* KCC-Chassam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KCC-Chassam.otf"; sourceTree = "<group>"; };
 		AF5E5C0E2C0CA46C00B83A3D /* Dovemayo_wild.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dovemayo_wild.ttf; sourceTree = "<group>"; };
+		AFE9EB9C2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ownglyph_eunbyul21-Rg.ttf"; sourceTree = "<group>"; };
+		AFE9EBA22C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ownglyph_ryuttung-Rg.ttf"; sourceTree = "<group>"; };
+		AFE9EBA42C0DCD1F00CF1956 /* Ownglyph_noocar-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ownglyph_noocar-Rg.ttf"; sourceTree = "<group>"; };
+		AFE9EBA62C0DCEC000CF1956 /* Ownglyph_jooreeletter-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ownglyph_jooreeletter-Rg.ttf"; sourceTree = "<group>"; };
 		DA156D212BEDC53600115A5F /* AppStoreNameMeditationp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreNameMeditationp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA156D242BEDC53600115A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA156D262BEDC53600115A5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +130,10 @@
 				DACA5A932C0D2BAA009FC65C /* SEOLEIMcool.otf */,
 				DACA5A952C0D83E1009FC65C /* SKYBORI.otf */,
 				DACA5A972C0D8830009FC65C /* RIDIBatang.otf */,
+				AFE9EB9C2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf */,
+				AFE9EBA22C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf */,
+				AFE9EBA42C0DCD1F00CF1956 /* Ownglyph_noocar-Rg.ttf */,
+				AFE9EBA62C0DCEC000CF1956 /* Ownglyph_jooreeletter-Rg.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -184,7 +196,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE9EBA52C0DCD1F00CF1956 /* Ownglyph_noocar-Rg.ttf in Resources */,
+				AFE9EBA32C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf in Resources */,
 				AF5E5C0B2C0CA28000B83A3D /* KCC-Chassam.otf in Resources */,
+				AFE9EBA72C0DCEC000CF1956 /* Ownglyph_jooreeletter-Rg.ttf in Resources */,
 				DA156D3C2BEDC8F600115A5F /* BMYEONSUNG_otf.otf in Resources */,
 				DACA5A8E2C0D22FD009FC65C /* Sagak-sagak.otf in Resources */,
 				DA40CBE52BF8229D00227FB6 /* Main.storyboard in Resources */,
@@ -192,6 +207,7 @@
 				DACA5A962C0D83E2009FC65C /* SKYBORI.otf in Resources */,
 				AF5E5C012C0C989300B83A3D /* omyu pretty.ttf in Resources */,
 				DAF6AD192C06043100DE7CB6 /* MangoDdobak-R(otf).otf in Resources */,
+				AFE9EB9D2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf in Resources */,
 				DA156D2E2BEDC53700115A5F /* Assets.xcassets in Resources */,
 				AF5E5C072C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf in Resources */,
 				AF5E5C052C0C9B4B00B83A3D /* The Jamsil OTF 2 Light.otf in Resources */,
