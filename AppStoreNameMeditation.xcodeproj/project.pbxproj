@@ -21,6 +21,10 @@
 		AFE9EBAF2C0DD24400CF1956 /* Yeongdeok Blueroad.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBAE2C0DD24400CF1956 /* Yeongdeok Blueroad.otf */; };
 		AFE9EBB12C0DD30100CF1956 /* Yeongdeok Sea.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBB02C0DD30000CF1956 /* Yeongdeok Sea.otf */; };
 		AFE9EBB32C0DD41800CF1956 /* SUITE-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBB22C0DD41800CF1956 /* SUITE-Regular.otf */; };
+		AFE9EBB92C0DD5B300CF1956 /* NanumSquareNeoOTF-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBB82C0DD5B300CF1956 /* NanumSquareNeoOTF-Rg.otf */; };
+		AFE9EBBB2C0DD67E00CF1956 /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBBA2C0DD67E00CF1956 /* LINESeedKR-Rg.otf */; };
+		AFE9EBBF2C0DD88B00CF1956 /* GangwonEduAll-OTFLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBBE2C0DD88B00CF1956 /* GangwonEduAll-OTFLight.otf */; };
+		AFE9EBC12C0DDA7F00CF1956 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBC02C0DDA7F00CF1956 /* Pretendard-Regular.otf */; };
 		DA156D252BEDC53600115A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D242BEDC53600115A5F /* AppDelegate.swift */; };
 		DA156D272BEDC53600115A5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D262BEDC53600115A5F /* SceneDelegate.swift */; };
 		DA156D292BEDC53600115A5F /* NameMeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA156D282BEDC53600115A5F /* NameMeditationVC.swift */; };
@@ -55,6 +59,10 @@
 		AFE9EBAE2C0DD24400CF1956 /* Yeongdeok Blueroad.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yeongdeok Blueroad.otf"; sourceTree = "<group>"; };
 		AFE9EBB02C0DD30000CF1956 /* Yeongdeok Sea.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yeongdeok Sea.otf"; sourceTree = "<group>"; };
 		AFE9EBB22C0DD41800CF1956 /* SUITE-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUITE-Regular.otf"; sourceTree = "<group>"; };
+		AFE9EBB82C0DD5B300CF1956 /* NanumSquareNeoOTF-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumSquareNeoOTF-Rg.otf"; sourceTree = "<group>"; };
+		AFE9EBBA2C0DD67E00CF1956 /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
+		AFE9EBBE2C0DD88B00CF1956 /* GangwonEduAll-OTFLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GangwonEduAll-OTFLight.otf"; sourceTree = "<group>"; };
+		AFE9EBC02C0DDA7F00CF1956 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		DA156D212BEDC53600115A5F /* AppStoreNameMeditationp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreNameMeditationp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA156D242BEDC53600115A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA156D262BEDC53600115A5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +154,10 @@
 				AFE9EBAE2C0DD24400CF1956 /* Yeongdeok Blueroad.otf */,
 				AFE9EBB02C0DD30000CF1956 /* Yeongdeok Sea.otf */,
 				AFE9EBB22C0DD41800CF1956 /* SUITE-Regular.otf */,
+				AFE9EBB82C0DD5B300CF1956 /* NanumSquareNeoOTF-Rg.otf */,
+				AFE9EBBA2C0DD67E00CF1956 /* LINESeedKR-Rg.otf */,
+				AFE9EBBE2C0DD88B00CF1956 /* GangwonEduAll-OTFLight.otf */,
+				AFE9EBC02C0DDA7F00CF1956 /* Pretendard-Regular.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -220,6 +232,7 @@
 				DACA5A962C0D83E2009FC65C /* SKYBORI.otf in Resources */,
 				AF5E5C012C0C989300B83A3D /* omyu pretty.ttf in Resources */,
 				DAF6AD192C06043100DE7CB6 /* MangoDdobak-R(otf).otf in Resources */,
+				AFE9EBBF2C0DD88B00CF1956 /* GangwonEduAll-OTFLight.otf in Resources */,
 				AFE9EB9D2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf in Resources */,
 				DA156D2E2BEDC53700115A5F /* Assets.xcassets in Resources */,
 				AFE9EBB12C0DD30100CF1956 /* Yeongdeok Sea.otf in Resources */,
@@ -230,8 +243,11 @@
 				DACA5A902C0D2814009FC65C /* GamtanRoadBatangRegular.otf in Resources */,
 				AFE9EBB32C0DD41800CF1956 /* SUITE-Regular.otf in Resources */,
 				AFE9EBAF2C0DD24400CF1956 /* Yeongdeok Blueroad.otf in Resources */,
+				AFE9EBC12C0DDA7F00CF1956 /* Pretendard-Regular.otf in Resources */,
 				AF5E5C0F2C0CA46C00B83A3D /* Dovemayo_wild.ttf in Resources */,
 				DA156D312BEDC53700115A5F /* Base in Resources */,
+				AFE9EBBB2C0DD67E00CF1956 /* LINESeedKR-Rg.otf in Resources */,
+				AFE9EBB92C0DD5B300CF1956 /* NanumSquareNeoOTF-Rg.otf in Resources */,
 				DACA5A942C0D2BAA009FC65C /* SEOLEIMcool.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
