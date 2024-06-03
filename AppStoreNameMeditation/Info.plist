@@ -23,6 +23,10 @@
 		<string>Ownglyph_ryuttung-Rg.ttf</string>
 		<string>Ownglyph_noocar-Rg.ttf</string>
 		<string>Ownglyph_jooreeletter-Rg.ttf</string>
+		<string>KyoboHandwriting2023wsa.otf</string>
+		<string>Yeongdeok Blueroad.otf</string>
+		<string>Yeongdeok Sea.otf</string>
+		<string>SUITE-Regular.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
