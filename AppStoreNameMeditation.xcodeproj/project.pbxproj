@@ -24,6 +24,9 @@
 		DACA5A8A2C0D17A0009FC65C /* Adultkid.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACA5A892C0D17A0009FC65C /* Adultkid.otf */; };
 		DACA5A8E2C0D22FD009FC65C /* Sagak-sagak.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACA5A8D2C0D22FC009FC65C /* Sagak-sagak.otf */; };
 		DACA5A902C0D2814009FC65C /* GamtanRoadBatangRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACA5A8F2C0D2814009FC65C /* GamtanRoadBatangRegular.otf */; };
+		DACA5A942C0D2BAA009FC65C /* SEOLEIMcool.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACA5A932C0D2BAA009FC65C /* SEOLEIMcool.otf */; };
+		DACA5A962C0D83E2009FC65C /* SKYBORI.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACA5A952C0D83E1009FC65C /* SKYBORI.otf */; };
+		DACA5A982C0D8830009FC65C /* RIDIBatang.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACA5A972C0D8830009FC65C /* RIDIBatang.otf */; };
 		DAE6938A2BF4D492001DD61A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE693892BF4D492001DD61A /* Model.swift */; };
 		DAF6AD172C05BC6500DE7CB6 /* FontVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF6AD162C05BC6500DE7CB6 /* FontVC.swift */; };
 		DAF6AD192C06043100DE7CB6 /* MangoDdobak-R(otf).otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF6AD182C06043100DE7CB6 /* MangoDdobak-R(otf).otf */; };
@@ -49,6 +52,9 @@
 		DACA5A892C0D17A0009FC65C /* Adultkid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Adultkid.otf; sourceTree = "<group>"; };
 		DACA5A8D2C0D22FC009FC65C /* Sagak-sagak.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sagak-sagak.otf"; sourceTree = "<group>"; };
 		DACA5A8F2C0D2814009FC65C /* GamtanRoadBatangRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GamtanRoadBatangRegular.otf; sourceTree = "<group>"; };
+		DACA5A932C0D2BAA009FC65C /* SEOLEIMcool.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEOLEIMcool.otf; sourceTree = "<group>"; };
+		DACA5A952C0D83E1009FC65C /* SKYBORI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SKYBORI.otf; sourceTree = "<group>"; };
+		DACA5A972C0D8830009FC65C /* RIDIBatang.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RIDIBatang.otf; sourceTree = "<group>"; };
 		DAE693892BF4D492001DD61A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DAF6AD162C05BC6500DE7CB6 /* FontVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontVC.swift; sourceTree = "<group>"; };
 		DAF6AD182C06043100DE7CB6 /* MangoDdobak-R(otf).otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MangoDdobak-R(otf).otf"; sourceTree = "<group>"; };
@@ -113,6 +119,9 @@
 				DACA5A892C0D17A0009FC65C /* Adultkid.otf */,
 				DACA5A8D2C0D22FC009FC65C /* Sagak-sagak.otf */,
 				DACA5A8F2C0D2814009FC65C /* GamtanRoadBatangRegular.otf */,
+				DACA5A932C0D2BAA009FC65C /* SEOLEIMcool.otf */,
+				DACA5A952C0D83E1009FC65C /* SKYBORI.otf */,
+				DACA5A972C0D8830009FC65C /* RIDIBatang.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -180,15 +189,18 @@
 				DACA5A8E2C0D22FD009FC65C /* Sagak-sagak.otf in Resources */,
 				DA40CBE52BF8229D00227FB6 /* Main.storyboard in Resources */,
 				AF5E5BFD2C0C937200B83A3D /* Cafe24Supermagic-Regular-v1.0.otf in Resources */,
+				DACA5A962C0D83E2009FC65C /* SKYBORI.otf in Resources */,
 				AF5E5C012C0C989300B83A3D /* omyu pretty.ttf in Resources */,
 				DAF6AD192C06043100DE7CB6 /* MangoDdobak-R(otf).otf in Resources */,
 				DA156D2E2BEDC53700115A5F /* Assets.xcassets in Resources */,
 				AF5E5C072C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf in Resources */,
 				AF5E5C052C0C9B4B00B83A3D /* The Jamsil OTF 2 Light.otf in Resources */,
+				DACA5A982C0D8830009FC65C /* RIDIBatang.otf in Resources */,
 				DACA5A8A2C0D17A0009FC65C /* Adultkid.otf in Resources */,
 				DACA5A902C0D2814009FC65C /* GamtanRoadBatangRegular.otf in Resources */,
 				AF5E5C0F2C0CA46C00B83A3D /* Dovemayo_wild.ttf in Resources */,
 				DA156D312BEDC53700115A5F /* Base in Resources */,
+				DACA5A942C0D2BAA009FC65C /* SEOLEIMcool.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
