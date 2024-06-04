@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FontVCDelegate: AnyObject {
-    func didSelectFont(name: String, displayName: String)
+    func didSelectFont()
 }
 
 class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -91,7 +91,7 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let selectedFont = Model.shared.font[indexPath.row]
         UserDefaults.standard.set(selectedFont.fontName, forKey: "fontName")
         UserDefaults.standard.set(selectedFont.displayName, forKey: "displayFontName")
-        delegate?.didSelectFont(name: selectedFont.fontName, displayName: selectedFont.displayName)
+        delegate?.didSelectFont()
         dismiss(animated: true, completion: nil)
     }
 }

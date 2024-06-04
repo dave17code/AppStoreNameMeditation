@@ -28,14 +28,14 @@ class NameMeditationVC: UIViewController {
         bibleVerseContainerView.layer.borderWidth = 1.6
         bibleVerseContainerView.layer.cornerRadius = 12
         setUpMeditationIndicator()
-        let fontFamilies = UIFont.familyNames
-        for family in fontFamilies {
-            print("Font family: \(family)")
-            let fontNames = UIFont.fontNames(forFamilyName: family)
-            for fontName in fontNames {
-                print("Font name: \(fontName)")
-            }
-        }
+//        let fontFamilies = UIFont.familyNames
+//        for family in fontFamilies {
+//            print("Font family: \(family)")
+//            let fontNames = UIFont.fontNames(forFamilyName: family)
+//            for fontName in fontNames {
+//                print("Font name: \(fontName)")
+//            }
+//        }
         if UserDefaults.standard.string(forKey: "fontName") == nil {
             UserDefaults.standard.set("BMYEONSUNG-OTF", forKey: "fontName")
         }
@@ -46,6 +46,8 @@ class NameMeditationVC: UIViewController {
             if nameTextField.text?.isEmpty == true {
                 let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
                 let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
+                print(selectedVerseIndex)
+                print(selectedVerseKey)
                 let dictionary = Model.shared.originalBibleVerseDictionary
                 if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
                     bibleVerseLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: 24)
@@ -213,9 +215,7 @@ extension NameMeditationVC: BibleVerseVCDelegate {
 }
 
 extension NameMeditationVC: FontVCDelegate {
-    func didSelectFont(name: String, displayName: String) {
-        UserDefaults.standard.set(name, forKey: "fontName")
-        UserDefaults.standard.set(displayName, forKey: "displayFontName")
+    func didSelectFont() {
         updateFont()
     }
 }
