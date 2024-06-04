@@ -91,8 +91,24 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let selectedFont = Model.shared.font[indexPath.row]
         UserDefaults.standard.set(selectedFont.fontName, forKey: "fontName")
         UserDefaults.standard.set(selectedFont.displayName, forKey: "displayFontName")
+        
+        // 각 폰트에 대해 적절한 크기를 설정합니다.
+        switch indexPath.row {
+        case 0:
+            UserDefaults.standard.set(23, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(17, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(17, forKey: "buttonFontSize")
+        case 1:
+            UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(15, forKey: "buttonFontSize")
+        // 여기에 각 폰트별로 폰트 크기를 설정하는 추가 case를 작성합니다.
+        default:
+            UserDefaults.standard.set(23, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(17, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(17, forKey: "buttonFontSize")
+        }
         delegate?.didSelectFont()
         dismiss(animated: true, completion: nil)
     }
 }
-
