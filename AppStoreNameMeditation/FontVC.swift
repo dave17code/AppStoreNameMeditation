@@ -115,14 +115,14 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             UserDefaults.standard.set(22, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(16, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(16, forKey: "buttonFontSize")
-        case 12:
+        case 11:
             UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(15, forKey: "buttonFontSize")
         case 13:
-            UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
-            UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
-            UserDefaults.standard.set(15, forKey: "buttonFontSize")
+            UserDefaults.standard.set(20, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(14, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(14, forKey: "buttonFontSize")
         case 14:
             UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
@@ -136,17 +136,13 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             UserDefaults.standard.set(20, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(20, forKey: "buttonFontSize")
         case 17:
-            UserDefaults.standard.set(26, forKey: "bibleVerseFontSize")
-            UserDefaults.standard.set(20, forKey: "bibleChapterFontSize")
-            UserDefaults.standard.set(20, forKey: "buttonFontSize")
+            UserDefaults.standard.set(27, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(21, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(21, forKey: "buttonFontSize")
         case 19:
             UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(15, forKey: "buttonFontSize")
-        case 20:
-            UserDefaults.standard.set(22, forKey: "bibleVerseFontSize")
-            UserDefaults.standard.set(16, forKey: "bibleChapterFontSize")
-            UserDefaults.standard.set(16, forKey: "buttonFontSize")
         case 21:
             UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
