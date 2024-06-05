@@ -15,7 +15,6 @@
 		<string>Adultkid.otf</string>
 		<string>Sagak-sagak.otf</string>
 		<string>GamtanRoadBatangRegular.otf</string>
-		<string>SOGANG_UNIVERSITY_for_mac.otf</string>
 		<string>SEOLEIMcool.otf</string>
 		<string>SKYBORI.otf</string>
 		<string>RIDIBatang.otf</string>
@@ -34,6 +33,7 @@
 		<string>LINESeedKR-Rg.otf</string>
 		<string>GangwonEduAll-OTFLight.otf</string>
 		<string>Pretendard-Regular.otf</string>
+		<string>BookkMyungjo-Bd.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

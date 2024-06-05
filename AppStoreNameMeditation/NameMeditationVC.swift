@@ -23,6 +23,15 @@ class NameMeditationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 커스텀 폰트 이름 출력
+        let fontFamilies = UIFont.familyNames
+        for family in fontFamilies {
+            print("Font family: \(family)")
+            let fontNames = UIFont.fontNames(forFamilyName: family)
+            for fontName in fontNames {
+                print("Font name: \(fontName)")
+            }
+        }
         nameTextField.layer.borderWidth = 1.2
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
@@ -34,7 +43,7 @@ class NameMeditationVC: UIViewController {
         if UserDefaults.standard.string(forKey: "displayFontName") == nil {
             UserDefaults.standard.set("배달의민족 연성체", forKey: "displayFontName")
         }
-        if UserDefaults.standard.string(forKey: "selectedVerseKey") == nil {
+        if UserDefaults.standard.string(forKey: "selectedVerseKey") == nil || UserDefaults.standard.integer(forKey: "bibleVerseFontSize") == 0 {
             UserDefaults.standard.set("시편 23:1-3", forKey: "selectedVerseKey")
             UserDefaults.standard.set(0, forKey: "selectedVerseIndex")
             UserDefaults.standard.set(23, forKey: "bibleVerseFontSize") // 기본 폰트 사이즈 설정
@@ -177,36 +186,37 @@ class NameMeditationVC: UIViewController {
     
     func updateBibleVerseChoiceButtonTitle() {
         let customFontName = UserDefaults.standard.string(forKey: "fontName")!
-        let customFont = UIFont(name: customFontName, size: CGFloat(UserDefaults.standard.integer(forKey: "buttonFontSize")))!
+        let customFont = UIFont(name: customFontName, size: CGFloat(UserDefaults.standard.integer(forKey: "buttonFontSize")))
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: customFont,
+            .font: customFont ?? "",
             .foregroundColor: UIColor.white
         ]
         bibleVerseChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "selectedVerseKey")!, attributes: attributes), for: .normal)
     }
     
     func updateFont() {
-        let customFontName = UserDefaults.standard.string(forKey: "fontName")!
+        guard let customFontName = UserDefaults.standard.string(forKey: "fontName") else { return }
         let bibleVerseFontSize = CGFloat(UserDefaults.standard.integer(forKey: "bibleVerseFontSize"))
         let bibleChapterFontSize = CGFloat(UserDefaults.standard.integer(forKey: "bibleChapterFontSize"))
         let buttonFontSize = CGFloat(UserDefaults.standard.integer(forKey: "buttonFontSize"))
-        
-        let customFont = UIFont(name: customFontName, size: buttonFontSize)!
-        let attributes: [NSAttributedString.Key: Any] = [
-            .font: customFont,
+        let bibleVerseFont = UIFont(name: customFontName, size: bibleVerseFontSize)
+        let bibleChapterFont = UIFont(name: customFontName, size: bibleChapterFontSize)
+        let buttonFont = UIFont(name: customFontName, size: buttonFontSize)
+        bibleVerseLabel.font = bibleVerseFont
+        bibleVerseChapterLabel.font = bibleChapterFont
+        meditateButton.titleLabel?.font = buttonFont
+        nameTextField.font = buttonFont
+        let buttonAttributes: [NSAttributedString.Key: Any] = [
+            .font: buttonFont as Any,
             .foregroundColor: UIColor.white
         ]
-        meditateButton.titleLabel?.font = customFont
-        nameTextField.font = customFont
-        bibleVerseLabel.font = UIFont(name: customFontName, size: bibleVerseFontSize)
-        bibleVerseChapterLabel.font = UIFont(name: customFontName, size: bibleChapterFontSize)
-        meditateButton.setAttributedTitle(NSAttributedString(string: "묵상하기", attributes: attributes), for: .normal)
-        bibleVerseChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "selectedVerseKey")!, attributes: attributes), for: .normal)
-        let attributesForFontChoiceButton: [NSAttributedString.Key: Any] = [
-            .font: customFont,
+        let fontChoiceButtonAttributes: [NSAttributedString.Key: Any] = [
+            .font: buttonFont as Any,
             .foregroundColor: UIColor.black
         ]
-        fontChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "displayFontName")!, attributes: attributesForFontChoiceButton), for: .normal)
+        meditateButton.setAttributedTitle(NSAttributedString(string: "묵상하기", attributes: buttonAttributes), for: .normal)
+        bibleVerseChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "selectedVerseKey") ?? "", attributes: buttonAttributes), for: .normal)
+        fontChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "displayFontName") ?? "", attributes: fontChoiceButtonAttributes), for: .normal)
     }
 }
 

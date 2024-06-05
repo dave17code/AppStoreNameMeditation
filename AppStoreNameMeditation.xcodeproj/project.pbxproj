@@ -13,6 +13,7 @@
 		AF5E5C072C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C062C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf */; };
 		AF5E5C0B2C0CA28000B83A3D /* KCC-Chassam.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C0A2C0CA28000B83A3D /* KCC-Chassam.otf */; };
 		AF5E5C0F2C0CA46C00B83A3D /* Dovemayo_wild.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF5E5C0E2C0CA46C00B83A3D /* Dovemayo_wild.ttf */; };
+		AFD5E81A2C10184D00F3A537 /* BookkMyungjo-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFD5E8192C10184D00F3A537 /* BookkMyungjo-Bd.ttf */; };
 		AFE9EB9D2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EB9C2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf */; };
 		AFE9EBA32C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBA22C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf */; };
 		AFE9EBA52C0DCD1F00CF1956 /* Ownglyph_noocar-Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFE9EBA42C0DCD1F00CF1956 /* Ownglyph_noocar-Rg.ttf */; };
@@ -54,6 +55,7 @@
 		AF5E5C062C0C9EEA00B83A3D /* KimjungchulScript-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KimjungchulScript-Regular.otf"; sourceTree = "<group>"; };
 		AF5E5C0A2C0CA28000B83A3D /* KCC-Chassam.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KCC-Chassam.otf"; sourceTree = "<group>"; };
 		AF5E5C0E2C0CA46C00B83A3D /* Dovemayo_wild.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dovemayo_wild.ttf; sourceTree = "<group>"; };
+		AFD5E8192C10184D00F3A537 /* BookkMyungjo-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BookkMyungjo-Bd.ttf"; sourceTree = "<group>"; };
 		AFE9EB9C2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ownglyph_eunbyul21-Rg.ttf"; sourceTree = "<group>"; };
 		AFE9EBA22C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ownglyph_ryuttung-Rg.ttf"; sourceTree = "<group>"; };
 		AFE9EBA42C0DCD1F00CF1956 /* Ownglyph_noocar-Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ownglyph_noocar-Rg.ttf"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				AFE9EBBA2C0DD67E00CF1956 /* LINESeedKR-Rg.otf */,
 				AFE9EBBE2C0DD88B00CF1956 /* GangwonEduAll-OTFLight.otf */,
 				AFE9EBC02C0DDA7F00CF1956 /* Pretendard-Regular.otf */,
+				AFD5E8192C10184D00F3A537 /* BookkMyungjo-Bd.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				AF5E5C052C0C9B4B00B83A3D /* The Jamsil OTF 2 Light.otf in Resources */,
 				DACA5A982C0D8830009FC65C /* RIDIBatang.otf in Resources */,
 				DACA5A8A2C0D17A0009FC65C /* Adultkid.otf in Resources */,
+				AFD5E81A2C10184D00F3A537 /* BookkMyungjo-Bd.ttf in Resources */,
 				AFE9EBCD2C0DE49100CF1956 /* NanumHimNaeRaNeunMarBoDan.ttf in Resources */,
 				DACA5A902C0D2814009FC65C /* GamtanRoadBatangRegular.otf in Resources */,
 				AFE9EBB32C0DD41800CF1956 /* SUITE-Regular.otf in Resources */,

@@ -20,6 +20,7 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         font = Model.shared.font
+        print(font.count)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -88,12 +89,17 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
         let selectedFont = Model.shared.font[indexPath.row]
         UserDefaults.standard.set(selectedFont.fontName, forKey: "fontName")
         UserDefaults.standard.set(selectedFont.displayName, forKey: "displayFontName")
         // 각 폰트에 대해 적절한 크기를 설정합니다.
         switch indexPath.row {
         case 1:
+            UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(15, forKey: "buttonFontSize")
+        case 2:
             UserDefaults.standard.set(22, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(16, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(16, forKey: "buttonFontSize")
@@ -109,7 +115,7 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             UserDefaults.standard.set(22, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(16, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(16, forKey: "buttonFontSize")
-        case 11:
+        case 12:
             UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(15, forKey: "buttonFontSize")
@@ -153,6 +159,22 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             UserDefaults.standard.set(26, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(20, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(20, forKey: "buttonFontSize")
+        case 25:
+            UserDefaults.standard.set(26, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(20, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(20, forKey: "buttonFontSize")
+        case 26:
+            UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(15, forKey: "buttonFontSize")
+        case 28:
+            UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(15, forKey: "buttonFontSize")
+        case 29:
+            UserDefaults.standard.set(20, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(14, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(14, forKey: "buttonFontSize")
         // 여기에 각 폰트별로 폰트 크기를 설정하는 추가 case를 작성합니다.
         default:
             UserDefaults.standard.set(23, forKey: "bibleVerseFontSize")
