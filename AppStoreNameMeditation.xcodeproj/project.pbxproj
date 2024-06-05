@@ -140,7 +140,7 @@
 		DA156D382BEDC58A00115A5F /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				DA156D3B2BEDC8F600115A5F /* BMYEONSUNG_otf.otf */,
+				DACA5A952C0D83E1009FC65C /* SKYBORI.otf */,
 				DAF6AD182C06043100DE7CB6 /* MangoDdobak-R(otf).otf */,
 				AF5E5BFC2C0C937200B83A3D /* Cafe24Supermagic-Regular-v1.0.otf */,
 				AF5E5C002C0C989300B83A3D /* omyu pretty.ttf */,
@@ -152,7 +152,7 @@
 				DACA5A8D2C0D22FC009FC65C /* Sagak-sagak.otf */,
 				DACA5A8F2C0D2814009FC65C /* GamtanRoadBatangRegular.otf */,
 				DACA5A932C0D2BAA009FC65C /* SEOLEIMcool.otf */,
-				DACA5A952C0D83E1009FC65C /* SKYBORI.otf */,
+				DA156D3B2BEDC8F600115A5F /* BMYEONSUNG_otf.otf */,
 				DACA5A972C0D8830009FC65C /* RIDIBatang.otf */,
 				AFE9EB9C2C0DC98A00CF1956 /* Ownglyph_eunbyul21-Rg.ttf */,
 				AFE9EBA22C0DCC3E00CF1956 /* Ownglyph_ryuttung-Rg.ttf */,

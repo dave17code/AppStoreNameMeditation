@@ -4,7 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>BMYEONSUNG_otf.otf</string>
+		<string>SKYBORI.otf</string>
 		<string>MangoDdobak-R(otf).otf</string>
 		<string>Cafe24Supermagic-Regular-v1.0.otf</string>
 		<string>omyu pretty.ttf</string>
@@ -16,7 +16,7 @@
 		<string>Sagak-sagak.otf</string>
 		<string>GamtanRoadBatangRegular.otf</string>
 		<string>SEOLEIMcool.otf</string>
-		<string>SKYBORI.otf</string>
+		<string>BMYEONSUNG_otf.otf</string>
 		<string>RIDIBatang.otf</string>
 		<string>Ownglyph_eunbyul21-Rg.ttf</string>
 		<string>Ownglyph_ryuttung-Rg.ttf</string>
