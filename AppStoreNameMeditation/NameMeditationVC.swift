@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NameMeditationVC: UIViewController {
+class NameMeditationVC: UIViewController, UITextFieldDelegate {
     
     let meditationIndicator = UIImageView()
     var isAnimating = false // 애니메이션 진행 상태를 추적하는 변수
@@ -32,6 +32,7 @@ class NameMeditationVC: UIViewController {
                 print("Font name: \(fontName)")
             }
         }
+        nameTextField.delegate = self
         nameTextField.layer.borderWidth = 1.2
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
@@ -217,6 +218,12 @@ class NameMeditationVC: UIViewController {
         meditateButton.setAttributedTitle(NSAttributedString(string: "묵상하기", attributes: buttonAttributes), for: .normal)
         bibleVerseChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "selectedVerseKey") ?? "", attributes: buttonAttributes), for: .normal)
         fontChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "displayFontName") ?? "", attributes: fontChoiceButtonAttributes), for: .normal)
+    }
+    
+    // UITextFieldDelegate 메서드
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // 키보드 숨기기
+        return true
     }
 }
 
