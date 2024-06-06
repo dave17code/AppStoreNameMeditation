@@ -39,50 +39,34 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
         bibleVerseContainerView.layer.cornerRadius = 12
         setUpMeditationIndicator()
         if UserDefaults.standard.string(forKey: "fontName") == nil {
-            UserDefaults.standard.set("BMYEONSUNG-OTF", forKey: "fontName")
+            UserDefaults.standard.set("SKYBORI", forKey: "fontName")
         }
         if UserDefaults.standard.string(forKey: "displayFontName") == nil {
-            UserDefaults.standard.set("배달의민족 연성체", forKey: "displayFontName")
+            UserDefaults.standard.set("하늘보리체", forKey: "displayFontName")
         }
         if UserDefaults.standard.string(forKey: "selectedVerseKey") == nil || UserDefaults.standard.integer(forKey: "bibleVerseFontSize") == 0 {
             UserDefaults.standard.set(0, forKey: "selectedVerseIndex")
             UserDefaults.standard.set("창세기 12:2", forKey: "selectedVerseKey")
-     
             UserDefaults.standard.set(23, forKey: "bibleVerseFontSize") // 기본 폰트 사이즈 설정
             UserDefaults.standard.set(17, forKey: "bibleChapterFontSize") // 기본 폰트 사이즈 설정
             UserDefaults.standard.set(17, forKey: "buttonFontSize") // 기본 폰트 사이즈 설정
         }
-        if nameTextField.text?.isEmpty == true {
-            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-            let dictionary = Model.shared.originalBibleVerseDictionary
-            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
-                bibleVerseLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleVerseFontSize")))
-                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
-                bibleVerseChapterLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleChapterFontSize")))
-                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
-            }
-        } else {
-            let userName = nameTextField.text!
-            Model.shared.userName = userName
-            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-            if let verseTuple = Model.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
-                bibleVerseLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleVerseFontSize")))
-                bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
-                bibleVerseChapterLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleChapterFontSize")))
-                bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
-            }
-        }
+        updateBibleVerseDisplay()
+        updateBibleVerseChoiceButtonTitle()
+        updateFont()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if UserDefaults.standard.string(forKey: "userName") != nil {
-            nameTextField.text = UserDefaults.standard.string(forKey: "userName")
+        
+        if let userName = UserDefaults.standard.string(forKey: "userName"), !userName.isEmpty {
+            nameTextField.text = userName
+            Model.shared.userName = userName
         }
+        
         updateBibleVerseChoiceButtonTitle()
         updateFont()
+        
         if bibleVerseChapterLabel.text != UserDefaults.standard.string(forKey: "selectedVerseKey") {
             meditationIndicatorAnimation()
         } else {
@@ -92,34 +76,14 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func meditateButton(_ sender: Any) {
         stopMeditationIndicatorAnimation()
-        if nameTextField.text?.isEmpty == true {
-            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-            let dictionary = Model.shared.originalBibleVerseDictionary
-            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
-                bibleVerseLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleVerseFontSize")))
-                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
-                bibleVerseChapterLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleChapterFontSize")))
-                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
-            }
-        } else {
-            let userName = nameTextField.text!
-            Model.shared.userName = userName
-            let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
-            let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
-            if let verseTuple = Model.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
-                bibleVerseLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleVerseFontSize")))
-                bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
-                bibleVerseChapterLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleChapterFontSize")))
-                bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
-            }
-        }
+        updateBibleVerseDisplay()
     }
     
     @IBAction func nameTextField(_ sender: Any) {
         meditationIndicatorAnimation()
         if let userName = nameTextField.text {
             UserDefaults.standard.set(userName, forKey: "userName")
+            Model.shared.userName = userName
         }
     }
     
@@ -152,7 +116,7 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
     }
     
     func meditationIndicatorAnimation(repeatCount: Int = 10000) {
-        guard !isAnimating else { return } // 애니메이션이 이미 진행 중이면 함수 종료
+        guard !isAnimating else { return }
         isAnimating = true
         meditationIndicator.isHidden = false
         DispatchQueue.global().async {
@@ -167,8 +131,7 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
                         })
                     })
                 }
-                print("Animation")
-                usleep(1000000) // 1초 지연 (애니메이션 시간 포함)
+                usleep(1000000)
             }
             DispatchQueue.main.async {
                 self.isAnimating = false
@@ -217,15 +180,33 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
         fontChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "displayFontName") ?? "", attributes: fontChoiceButtonAttributes), for: .normal)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    func updateBibleVerseDisplay() {
+        let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+        let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
+        
+        if !Model.shared.userName.isEmpty {
+            if let verseTuple = Model.shared.getNameBibleVerse(selectedVerseIndex, selectedVerseKey) {
+                bibleVerseLabel.setTextWithFadeAnimation(verseTuple.value, duration: 1.0)
+                bibleVerseChapterLabel.setTextWithFadeAnimation(verseTuple.key, duration: 1.0)
+            }
+        } else {
+            let dictionary = Model.shared.originalBibleVerseDictionary
+            if let originalVerse = dictionary[selectedVerseIndex][selectedVerseKey] {
+                bibleVerseLabel.setTextWithFadeAnimation(originalVerse, duration: 1.0)
+                bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
+            }
+        }
     }
 }
 
 extension NameMeditationVC: BibleVerseVCDelegate {
     func didSelectBibleVerse() {
         updateBibleVerseChoiceButtonTitle()
-        meditationIndicatorAnimation() // 성경 구절 변경 시 애니메이션 시작
+        meditationIndicatorAnimation()
     }
 }
 

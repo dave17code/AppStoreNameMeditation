@@ -56,14 +56,12 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        // 기존의 체크마크 이미지뷰와 라벨 제거
         for subview in cell.contentView.subviews {
             subview.removeFromSuperview()
         }
-        // 라벨 생성 및 설정
         let label = UILabel()
         label.text = bibleVerseChapter[indexPath.row]
-        label.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: 17)
+        label.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleChapterFontSize")))
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         cell.contentView.addSubview(label)
@@ -71,7 +69,6 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
             label.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor)
         ])
-        // 현재 선택된 구절 인덱스를 유저디폴트에서 가져와서 체크마크 표시
         let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
         if indexPath.row == selectedVerseIndex {
             let checkmarkImage = UIImage(systemName: "checkmark.seal.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.black)
@@ -90,7 +87,6 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = bibleVerseChapter[indexPath.row]
-        // 선택한 성경 구절을 유저디폴트에 저장
         UserDefaults.standard.set(selectedItem, forKey: "selectedVerseKey")
         UserDefaults.standard.set(indexPath.row, forKey: "selectedVerseIndex")
         delegate?.didSelectBibleVerse()
