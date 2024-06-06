@@ -45,15 +45,12 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
             UserDefaults.standard.set("배달의민족 연성체", forKey: "displayFontName")
         }
         if UserDefaults.standard.string(forKey: "selectedVerseKey") == nil || UserDefaults.standard.integer(forKey: "bibleVerseFontSize") == 0 {
-            UserDefaults.standard.set("시편 23:1-3", forKey: "selectedVerseKey")
             UserDefaults.standard.set(0, forKey: "selectedVerseIndex")
+            UserDefaults.standard.set("창세기 12:2", forKey: "selectedVerseKey")
+     
             UserDefaults.standard.set(23, forKey: "bibleVerseFontSize") // 기본 폰트 사이즈 설정
             UserDefaults.standard.set(17, forKey: "bibleChapterFontSize") // 기본 폰트 사이즈 설정
             UserDefaults.standard.set(17, forKey: "buttonFontSize") // 기본 폰트 사이즈 설정
-        }
-        if UserDefaults.standard.string(forKey: "selectedVerseKey") != nil {
-            UserDefaults.standard.set(0, forKey: "selectedVerseIndex")
-            UserDefaults.standard.set("시편 23:1-3", forKey: "selectedVerseKey")
         }
         if nameTextField.text?.isEmpty == true {
             let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
