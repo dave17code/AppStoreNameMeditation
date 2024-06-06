@@ -13,13 +13,15 @@ struct Model {
     var userName: String = ""
     
     let nameInBibleVerseDictionary: [[String: String]] = [
-        ["시편 23:1-3": "여호와는 name의 목자시니 name이 부족함이 없으리로다 그가 name을 푸른 초장에 누이시며 쉴만한 물가로 인도하시는도다 name의 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다"],
-        ["출애굽기 20:12": "name의 부모를 공경하라 그리하면 네 하나님 여호와가 name에게 준 땅에서 name의 생명이 길리라"],
+        ["창세기 12:2": "내가 name으로 큰 민족을 이루고 name에게 복을 주어 name의 이름을 창대하게 하리니 name은 복의 근원이 될지라"],
+        ["창세기 28:15": "내가 name과 함께 있어 name이 어디로 가든지 name을 지키며 name을 이끌어 이 땅으로 돌아오게 할지라 내가 name에게 허락한 것을 다 이루기까지 name을 떠나지 아니하리라"],
+        ["출애굽기 20:12": "name의 부모를 공경하라 그리하면 name의 하나님 여호와가 name에게 준 땅에서 name의 생명이 길리라"],
         ["민수기 6:24-26": "여호와는 name에게 복을 주시고 name을 지키시기를 원하며 여호와는 그의 얼굴을 name에게 비추사 은혜 베푸시기를 원하며 여호와는 그 얼굴을 name에게로 향하여 드사 평강 주시기를 원하노라"
         ],
         ["신명기 31:6": "name은 강하고 담대하라 두려워하지 말라 그들 앞에서 떨지 말라 이는 네 하나님 여호와 그가 name과 함께 행하시며 결코 name을 떠나지 아니하시며 버리지 아니하실 것임이니라"
         ],
         ["욥기 23:10": "name이 가는 길을 그가 아시나니 그가 name을 단련하신 후에는 name이 정금 같이 나오리라"],
+        ["시편 23:1-3": "여호와는 name의 목자시니 name이 부족함이 없으리로다 그가 name을 푸른 초장에 누이시며 쉴만한 물가로 인도하시는도다 name의 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다"],
         ["시편 46:1": "하나님은 name의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라"],
         ["시편 62:5": "name의 영혼아 잠잠히 하나님만 바라라 무릇 name의 소망이 그로부터 나오는도다"],
         ["시편 119:105": "주의 말씀은 name의 발에 등이요 name의 길에 빛이니이다"],
@@ -40,13 +42,15 @@ struct Model {
     ]
     
     let originalBibleVerseDictionary: [[String: String]] = [
+        ["창세기 12:2": "내가 너로 큰 민족을 이루고 네게 복을 주어 네 이름을 창대하게 하리니 너는 복의 근원이 될지라"],
+        ["창세기 28:15": "내가 너와 함께 있어 네가 어디로 가든지 너를 지키며 너를 이끌어 이 땅으로 돌아오게 할지라 내가 네게 허락한 것을 다 이루기까지 너를 떠나지 아니하리라"],
         ["출애굽기 20:12": "네 부모를 공경하라 그리하면 네 하나님 여호와가 네게 준 땅에서 네 생명이 길리라"],
-        ["시편 23:1-3": "여호와는 나의 목자시니 내가 부족함이 없으리로다 그가 나를 푸른 초장에 누이시며 쉴만한 물가로 인도하시는도다 내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다"],
         ["민수기 6:24-26": "여호와는 네게 복을 주시고 너를 지키시기를 원하며 여호와는 그의 얼굴을 네게 비추사 은혜 베푸시기를 원하며 여호와는 그 얼굴을 네게로 향하여 드사 평강 주시기를 원하노라"
         ],
         ["신명기 31:6": "너희는 강하고 담대하라 두려워하지 말라 그들 앞에서 떨지 말라 이는 네 하나님 여호와 그가 너와 함께 행하시며 결코 너를 떠나지 아니하시며 버리지 아니하실 것임이니라"
         ],
         ["욥기 23:10": "내가 가는 길을 그가 아시나니 그가 나를 단련하신 후에는 내가 정금 같이 나오리라"],
+        ["시편 23:1-3": "여호와는 나의 목자시니 내가 부족함이 없으리로다 그가 나를 푸른 초장에 누이시며 쉴만한 물가로 인도하시는도다 내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다"],
         ["시편 46:1": "하나님은 우리의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라"],
         ["시편 62:5": "나의 영혼아 잠잠히 하나님만 바라라 무릇 나의 소망이 그로부터 나오는도다"],
         ["시편 119:105": "주의 말씀은 내 발에 등이요 내 길에 빛이니이다"],
@@ -72,7 +76,31 @@ struct Model {
         guard let template = nameInBibleVerseDictionary[index][key] else {
             return nil
         }
-        let verse = template.replacingOccurrences(of: "name", with: userName)
-        return (key, verse)
+        let adjustedVerse = adjustVerse(template, userName: userName)
+        return (key, adjustedVerse)
+    }
+    
+    private func adjustVerse(_ verse: String, userName: String) -> String {
+        let lastChar = userName.last!
+        let hasBatchim = (lastChar.unicodeScalars.first!.value - 0xAC00) % 28 != 0
+        if hasBatchim {
+            return verse
+                .replacingOccurrences(of: "name의", with: "\(userName)의")
+                .replacingOccurrences(of: "name은", with: "\(userName)은")
+                .replacingOccurrences(of: "name이", with: "\(userName)이")
+                .replacingOccurrences(of: "name을", with: "\(userName)을")
+                .replacingOccurrences(of: "name과", with: "\(userName)과")
+                .replacingOccurrences(of: "name으로", with: "\(userName)으로")
+                .replacingOccurrences(of: "name에게", with: "\(userName)에게")
+        } else {
+            return verse
+                .replacingOccurrences(of: "name의", with: "\(userName)의")
+                .replacingOccurrences(of: "name은", with: "\(userName)는")
+                .replacingOccurrences(of: "name이", with: "\(userName)가")
+                .replacingOccurrences(of: "name을", with: "\(userName)를")
+                .replacingOccurrences(of: "name과", with: "\(userName)와")
+                .replacingOccurrences(of: "name으로", with: "\(userName)로")
+                .replacingOccurrences(of: "name에게", with: "\(userName)에게")
+        }
     }
 }
