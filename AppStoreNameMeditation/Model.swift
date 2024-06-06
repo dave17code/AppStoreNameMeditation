@@ -97,8 +97,9 @@ struct Model {
     private func adjustVerse(_ verse: String, userName: String) -> String {
         let lastChar = userName.last!
         let hasBatchim = (lastChar.unicodeScalars.first!.value - 0xAC00) % 28 != 0
+        var adjustedVerse = verse
         if hasBatchim {
-            return verse
+            adjustedVerse = adjustedVerse
                 .replacingOccurrences(of: "name의", with: "\(userName)의")
                 .replacingOccurrences(of: "name은", with: "\(userName)은")
                 .replacingOccurrences(of: "name이", with: "\(userName)이")
@@ -107,7 +108,7 @@ struct Model {
                 .replacingOccurrences(of: "name으로", with: "\(userName)으로")
                 .replacingOccurrences(of: "name에게", with: "\(userName)에게")
         } else {
-            return verse
+            adjustedVerse = adjustedVerse
                 .replacingOccurrences(of: "name의", with: "\(userName)의")
                 .replacingOccurrences(of: "name은", with: "\(userName)는")
                 .replacingOccurrences(of: "name이", with: "\(userName)가")
@@ -116,5 +117,8 @@ struct Model {
                 .replacingOccurrences(of: "name으로", with: "\(userName)로")
                 .replacingOccurrences(of: "name에게", with: "\(userName)에게")
         }
+        // 예외 처리: 'name' 뒤에 조사가 없는 경우
+        adjustedVerse = adjustedVerse.replacingOccurrences(of: "name", with: userName)
+        return adjustedVerse
     }
 }
