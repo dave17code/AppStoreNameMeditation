@@ -238,6 +238,14 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
         }
         return false
     }
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        // 한글 및 영어만 허용하는 정규식 패턴
+//        let allowedCharacterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ가-힣").inverted
+//        // replacementString이 allowedCharacterSet에 포함되지 않는지 확인
+//        let isValidInput = string.rangeOfCharacter(from: allowedCharacterSet) == nil
+//        return isValidInput
+//    }
 }
 
 extension NameMeditationVC: BibleVerseVCDelegate {
