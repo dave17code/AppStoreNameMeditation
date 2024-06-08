@@ -95,7 +95,17 @@ struct Model {
     }
 
     private func adjustVerse(_ verse: String, userName: String) -> String {
-        let lastChar = userName.last!
+        guard let lastChar = userName.last else {
+            return verse
+        }
+        // 한글 자음 또는 모음으로 끝나는지 확인
+        let isKoreanVowel = (lastChar >= "\u{1161}" && lastChar <= "\u{1175}") || (lastChar >= "\u{314F}" && lastChar <= "\u{3163}")
+        let isKoreanConsonant = (lastChar >= "\u{1100}" && lastChar <= "\u{1112}") || (lastChar >= "\u{3131}" && lastChar <= "\u{314E}")
+
+        // 한글 자음 또는 모음으로 끝나면 조정하지 않음
+        if isKoreanVowel || isKoreanConsonant {
+            return verse.replacingOccurrences(of: "name", with: userName)
+        }
         let hasBatchim = (lastChar.unicodeScalars.first!.value - 0xAC00) % 28 != 0
         var adjustedVerse = verse
         if hasBatchim {
