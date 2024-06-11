@@ -60,7 +60,6 @@ class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorInset = .zero
-        
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
