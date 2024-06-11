@@ -28,6 +28,11 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
         setupTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        scrollToSelectedVerse()
+    }
+    
     private func setupHeaderView() {
         headerView.backgroundColor = .black
         let titleLabel = UILabel()
@@ -63,7 +68,7 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -109,5 +114,11 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
         UserDefaults.standard.set(indexPath.row, forKey: "selectedVerseIndex")
         delegate?.didSelectBibleVerse()
         dismiss(animated: true, completion: nil)
+    }
+    
+    private func scrollToSelectedVerse() {
+        let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
+        let indexPath = IndexPath(row: selectedVerseIndex, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: false)
     }
 }

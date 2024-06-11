@@ -26,6 +26,11 @@ class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         setupHeaderView()
         setupTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        scrollToSelectedFont()
+    }
 
     private func setupHeaderView() {
         headerView.backgroundColor = .black
@@ -112,6 +117,7 @@ class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let selectedFont = Model.shared.font[indexPath.row]
         UserDefaults.standard.set(selectedFont.fontName, forKey: "fontName")
         UserDefaults.standard.set(selectedFont.displayName, forKey: "displayFontName")
+        UserDefaults.standard.set(indexPath.row, forKey: "selectedFontIndex")  // 선택한 폰트 인덱스를 저장합니다.
         // 각 폰트에 대해 적절한 크기를 설정합니다.
         switch indexPath.row {
         case 1, 11, 13, 14, 19, 22, 26, 29:
@@ -149,5 +155,11 @@ class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
         delegate?.didSelectFont()
         dismiss(animated: true, completion: nil)
+    }
+    
+    private func scrollToSelectedFont() {
+        let selectedFontIndex = UserDefaults.standard.integer(forKey: "selectedFontIndex")
+        let indexPath = IndexPath(row: selectedFontIndex, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .top, animated: false)
     }
 }
