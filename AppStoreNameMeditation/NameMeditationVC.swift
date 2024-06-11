@@ -50,7 +50,6 @@ class NameMeditationVC: UIViewController {
             UserDefaults.standard.set(17, forKey: "bibleChapterFontSize") // 기본 폰트 사이즈 설정
             UserDefaults.standard.set(17, forKey: "buttonFontSize") // 기본 폰트 사이즈 설정
         }
-
         updateBibleVerse()
     }
 
@@ -108,10 +107,10 @@ class NameMeditationVC: UIViewController {
     }
 
     @IBAction func fontChoiceButton(_ sender: Any) {
-        let fontVC = FontVC()
-        fontVC.modalPresentationStyle = .fullScreen
-        fontVC.delegate = self
-        present(fontVC, animated: true, completion: nil)
+        let fontChoiceVC = FontChoiceVC()
+        fontChoiceVC.modalPresentationStyle = .fullScreen
+        fontChoiceVC.delegate = self
+        present(fontChoiceVC, animated: true, completion: nil)
     }
 
     func setUpMeditationIndicator() {
@@ -251,7 +250,7 @@ extension NameMeditationVC: BibleVerseVCDelegate {
     }
 }
 
-extension NameMeditationVC: FontVCDelegate {
+extension NameMeditationVC: FontChoiceVCDelegate {
     func didSelectFont() {
         updateFont()
     }

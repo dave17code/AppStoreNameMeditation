@@ -7,33 +7,27 @@
 
 import UIKit
 
-protocol FontVCDelegate: AnyObject {
+protocol FontChoiceVCDelegate: AnyObject {
     func didSelectFont()
 }
 
-class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var delegate: FontVCDelegate?
+    var delegate: FontChoiceVCDelegate?
     var font: [(fontName: String, displayName: String)] = []
     private let tableView = UITableView()
+    private let headerView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         font = Model.shared.font
         print(font.count)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.separatorInset = .zero
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 45))
+        setupHeaderView()
+        setupTableView()
+    }
+
+    private func setupHeaderView() {
         headerView.backgroundColor = .black
         let titleLabel = UILabel()
         titleLabel.text = "폰트 선택"
@@ -42,13 +36,38 @@ class FontVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         headerView.addSubview(titleLabel)
+        view.addSubview(headerView)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 45),
             titleLabel.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: headerView.centerYAnchor)
         ])
-        tableView.tableHeaderView = headerView
     }
     
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorInset = .zero
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Model.shared.font.count
     }
