@@ -244,8 +244,6 @@ class NameMeditationVC: UIViewController {
 
 extension NameMeditationVC: BibleVerseVCDelegate {
     func didSelectBibleVerse() {
-        // 성경 구절 선택 시 selectedVerseKey와 selectedVerseIndex만 업데이트
-        let selectedVerseIndex = UserDefaults.standard.integer(forKey: "selectedVerseIndex")
         let selectedVerseKey = UserDefaults.standard.string(forKey: "selectedVerseKey") ?? ""
         if bibleVerseChapterLabel.text != selectedVerseKey {
             meditationIndicatorAnimation()
