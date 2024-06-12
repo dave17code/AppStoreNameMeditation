@@ -82,7 +82,7 @@ class NameMeditationVC: UIViewController {
         } else {
             let userName = nameTextField.text ?? Model.shared.userName
             if containsInvalidCharacters(userName) {
-                bibleVerseLabel.setTextWithFadeAnimation("한글이 정확하게 입력되지 않았습니다. 이름을 정확히 입력해주세요.", duration: 1.0)
+                bibleVerseLabel.setTextWithFadeAnimation("한글이 정확하게 입력되지 않았습니다 이름을 정확하게 입력해주세요", duration: 1.0)
                 bibleVerseChapterLabel.setTextWithFadeAnimation("오류 발생", duration: 1.0)
             } else {
                 Model.shared.userName = userName

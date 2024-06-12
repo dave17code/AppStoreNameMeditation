@@ -15,10 +15,23 @@ struct Model {
             return UserDefaults.standard.string(forKey: "userName") ?? ""
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: "userName")
+            if isValidKorean(newValue) {
+                UserDefaults.standard.set(newValue, forKey: "userName")
+            } else {
+                UserDefaults.standard.set("", forKey: "userName")
+            }
         }
     }
-
+    
+    private func isValidKorean(_ text: String) -> Bool {
+        for scalar in text.unicodeScalars {
+            if !(scalar.value >= 0xAC00 && scalar.value <= 0xD7A3) {
+                return false
+            }
+        }
+        return true
+    }
+    
     let nameInBibleVerseDictionary: [[String: String]] = [
         ["창세기 12:2": "내가 name으로 큰 민족을 이루고 name에게 복을 주어 name의 이름을 창대케 하리니 name은 복의 근원이 될지라"],
         ["창세기 28:15": "내가 name과 함께 있어 name이 어디로 가든지 name을 지키며 name을 이끌어 이 땅으로 돌아오게 할지라 내가 name에게 허락한 것을 다 이루기까지 name을 떠나지 아니하리라"],
@@ -31,8 +44,10 @@ struct Model {
         ["시편 3:3": "여호와여 주는 name의 방패시요 name의 영광이시요 name의 머리를 드시는 자니이다"],
         ["시편 4:8": "name이 평안히 눕고 자기도 하리니 name을 안전히 거하게 하시는 이는 오직 여호와이시니이다"],
         ["시편 16:8": "name이 여호와를 항상 name 앞에 모심이여 그가 name의 오른쪽에 계시므로 name이 흔들리지 아니하리로다"],
+        ["시편 16:11": "주께서 생명의 길로 name에게 보이시리니 주의 앞에는 충만한 기쁨이 있고 주의 오른쪽에는 영원한 즐거움이 있나이다"],
         ["시편 23:1-3": "여호와는 name의 목자시니 name이 부족함이 없으리로다 그가 name을 푸른 초장에 누이시며 쉴만한 물가로 인도하시는도다 name의 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다"],
         ["시편 27:1": "여호와는 name의 빛이요 name의 구원이시니 name이 누구를 두려워하리요 여호와는 name의 생명의 능력이시니 name이 누구를 무서워하리요"],
+        ["시편 34:8": "name은 여호와의 선하심을 맛보아 알지어다 그에게 피하는 자는 복이 있도다"],
         ["시편 37:4": "또 여호와를 기뻐하라 그가 name의 마음의 소원을 name에게 이루어 주시리로다"],
         ["시편 46:1": "하나님은 name의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라"],
         ["시편 62:5": "name의 영혼아 잠잠히 하나님만 바라라 무릇 name의 소망이 그로부터 나오는도다"],
@@ -91,7 +106,7 @@ struct Model {
         ["베드로전서 5:7": "name의 염려를 다 주께 맡겨 버리라 이는 저가 name을 권고하심이니라"],
         ["요한일서 5:4-5": "대저 하나님께로서 난 자마다 세상을 이기느니라 세상을 이긴 이김은 이것이니 name의 믿음이니라 예수께서 하나님의 아들이심을 믿는 자가 아니면 세상을 이기는 자가 누구뇨"]
     ]
-
+    
     let originalBibleVerseDictionary: [[String: String]] = [
         ["창세기 12:2": "내가 너로 큰 민족을 이루고 네게 복을 주어 네 이름을 창대케 하리니 너는 복의 근원이 될지라"],
         ["창세기 28:15": "내가 너와 함께 있어 네가 어디로 가든지 너를 지키며 너를 이끌어 이 땅으로 돌아오게 할지라 내가 네게 허락한 것을 다 이루기까지 너를 떠나지 아니하리라"],
@@ -104,8 +119,10 @@ struct Model {
         ["시편 3:3": "여호와여 주는 나의 방패시요 나의 영광이시요 나의 머리를 드시는 자니이다"],
         ["시편 4:8": "내가 평안히 눕고 자기도 하리니 나를 안전히 거하게 하시는 이는 오직 여호와이시니이다"],
         ["시편 16:8": "내가 여호와를 항상 내 앞에 모심이여 그가 나의 오른쪽에 계시므로 내가 흔들리지 아니하리로다"],
+        ["시편 16:11": "주께서 생명의 길로 내게 보이시리니 주의 앞에는 충만한 기쁨이 있고 주의 오른쪽에는 영원한 즐거움이 있나이다"],
         ["시편 23:1-3": "여호와는 나의 목자시니 내가 부족함이 없으리로다 그가 나를 푸른 초장에 누이시며 쉴만한 물가로 인도하시는도다 내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다"],
         ["시편 27:1": "여호와는 나의 빛이요 나의 구원이시니 내가 누구를 두려워하리요 여호와는 내 생명의 능력이시니 내가 누구를 무서워하리요"],
+        ["시편 34:8": "너희는 여호와의 선하심을 맛보아 알지어다 그에게 피하는 자는 복이 있도다"],
         ["시편 37:4": "또 여호와를 기뻐하라 그가 네 마음의 소원을 네게 이루어 주시리로다"],
         ["시편 46:1": "하나님은 우리의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라"],
         ["시편 62:5": "나의 영혼아 잠잠히 하나님만 바라라 무릇 나의 소망이 그로부터 나오는도다"],
@@ -164,7 +181,7 @@ struct Model {
         ["베드로전서 5:7": "너희 염려를 다 주께 맡겨 버리라 이는 저가 너희를 권고하심이니라"],
         ["요한일서 5:4-5": "대저 하나님께로서 난 자마다 세상을 이기느니라 세상을 이긴 이김은 이것이니 우리의 믿음이니라 예수께서 하나님의 아들이심을 믿는 자가 아니면 세상을 이기는 자가 누구뇨"]
     ]
-
+    
     let font: [(fontName: String, displayName: String)] = [
         ("SKYBORI", "하늘보리체"), ("MangoDdobak-R", "망고보드 또박체"), ("Cafe24Supermagic-OTF-Regular", "카페24슈퍼매직"),
         ("omyu_pretty", "오뮤다예쁨체"), ("TheJamsilOTF2Light", "롯데 더잠실체"), ("KimjungchulScript-Regular", "김정철 손글씨"),
@@ -177,15 +194,18 @@ struct Model {
         ("NanumYaGeunHaNeunGimJuIm", "나눔 김주임"), ("LINESeedSansKR-Regular", "Line Seed"), ("GangwonEduAll-OTFLight", "강원교육 모두체"),
         ("Pretendard-Regular", "프리텐다드"), ("BookkMyungjo-Bd", "부크크 명조")
     ]
-
+    
     func getNameBibleVerse(_ index: Int, _ key: String) -> (key: String, value: String)? {
         guard let template = nameInBibleVerseDictionary[index][key] else {
             return nil
         }
+        if userName.isEmpty {
+            return (key, originalBibleVerseDictionary[index][key] ?? "")
+        }
         let adjustedVerse = adjustVerse(template, userName: userName)
         return (key, adjustedVerse)
     }
-
+    
     private func adjustVerse(_ verse: String, userName: String) -> String {
         guard let lastChar = userName.last else {
             return verse
