@@ -9,9 +9,7 @@
 		<string>Cafe24Supermagic-Regular-v1.0.otf</string>
 		<string>omyu pretty.ttf</string>
 		<string>The Jamsil OTF 2 Light.otf</string>
-		<string>KimjungchulScript-Regular.otf</string>
 		<string>KCC-Chassam.otf</string>
-		<string>Dovemayo_wild.ttf</string>
 		<string>Adultkid.otf</string>
 		<string>Sagak-sagak.otf</string>
 		<string>GamtanRoadBatangRegular.otf</string>
@@ -20,7 +18,6 @@
 		<string>RIDIBatang.otf</string>
 		<string>Ownglyph_eunbyul21-Rg.ttf</string>
 		<string>Ownglyph_ryuttung-Rg.ttf</string>
-		<string>Ownglyph_noocar-Rg.ttf</string>
 		<string>Ownglyph_jooreeletter-Rg.ttf</string>
 		<string>KyoboHandwriting2023wsa.otf</string>
 		<string>Yeongdeok Blueroad.otf</string>
@@ -29,11 +26,9 @@
 		<string>NanumSquareNeoOTF-Rg.otf</string>
 		<string>NanumBarunpenR.otf</string>
 		<string>NanumHimNaeRaNeunMarBoDan.ttf</string>
-		<string>NanumYaGeunHaNeunGimJuIm.ttf</string>
 		<string>LINESeedKR-Rg.otf</string>
 		<string>GangwonEduAll-OTFLight.otf</string>
 		<string>Pretendard-Regular.otf</string>
-		<string>BookkMyungjo-Bd.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

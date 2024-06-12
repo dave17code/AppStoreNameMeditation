@@ -184,15 +184,14 @@ struct Model {
     
     let font: [(fontName: String, displayName: String)] = [
         ("SKYBORI", "하늘보리체"), ("MangoDdobak-R", "망고보드 또박체"), ("Cafe24Supermagic-OTF-Regular", "카페24슈퍼매직"),
-        ("omyu_pretty", "오뮤다예쁨체"), ("TheJamsilOTF2Light", "롯데 더잠실체"), ("KimjungchulScript-Regular", "김정철 손글씨"),
-        ("KCC-Chassam", "KCC 차쌤체"), ("Dovemayo_wild", "거친둘기마요"), ("AdultKid", "어른아이"), ("Sagaksagak", "사각사각"),
-        ("GamtanRoad-Batang-Regular", "감탄로드 바탕체"), ("seolleimcoolot-SemiBold", "설레임체"), ("BMYEONSUNG-OTF", "배달의민족 연성체"),
-        ("RIDIBatang", "리디 바탕체"), ("Ownglyph_eunbyul21-Rg", "온글잎 은별"), ("Ownglyph_ryuttung-Rg", "온글잎 류뚱체"),
-        ("Ownglyph_noocar-Rg", "온글잎 누카"), ("Ownglyph_jooreeletter-Rg", "온글잎 주리손편지"), ("KyoboHandwriting2023wsa", "교보 손글씨 우선아"),
+        ("omyu_pretty", "오뮤다예쁨체"), ("TheJamsilOTF2Light", "롯데 더잠실체"), ("KCC-Chassam", "KCC 차쌤체"), ("AdultKid", "어른아이"),
+        ("Sagaksagak", "사각사각"), ("GamtanRoad-Batang-Regular", "감탄로드 바탕체"), ("seolleimcoolot-SemiBold", "설레임체"),
+        ("BMYEONSUNG-OTF", "배달의민족 연성체"), ("RIDIBatang", "리디 바탕체"), ("Ownglyph_eunbyul21-Rg", "온글잎 은별"),
+        ("Ownglyph_ryuttung-Rg", "온글잎 류뚱체"), ("Ownglyph_jooreeletter-Rg", "온글잎 주리손편지"), ("KyoboHandwriting2023wsa", "교보 손글씨 우선아"),
         ("Yeongdeok Blueroad", "영덕 블루로드체"), ("Yeongdeok Sea", "영덕 바다체"), ("SUITE-Regular", "스위트"),
         ("NanumSquareNeo-bRg", "나눔스퀘어 네오"), ("NanumBarunpenOTF", "나눔 바른펜"), ("NanumHimNaeRaNeunMarBoDan", "나눔 힘내라는말"),
-        ("NanumYaGeunHaNeunGimJuIm", "나눔 김주임"), ("LINESeedSansKR-Regular", "Line Seed"), ("GangwonEduAll-OTFLight", "강원교육 모두체"),
-        ("Pretendard-Regular", "프리텐다드"), ("BookkMyungjo-Bd", "부크크 명조")
+        ("LINESeedSansKR-Regular", "Line Seed"), ("GangwonEduAll-OTFLight", "강원교육 모두체"),
+        ("Pretendard-Regular", "프리텐다드")
     ]
     
     func getNameBibleVerse(_ index: Int, _ key: String) -> (key: String, value: String)? {
