@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NameMeditationVC: UIViewController {
+class NameMeditationVC: UIViewController, UITextFieldDelegate {
 
     let meditationIndicator = UIImageView()
     var isAnimating = false // 애니메이션 진행 상태를 추적하는 변수
@@ -65,6 +65,16 @@ class NameMeditationVC: UIViewController {
         } else {
             stopMeditationIndicatorAnimation()
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
+    // UITextFieldDelegate 메서드 구현
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     @IBAction func meditateButton(_ sender: Any) {
@@ -191,10 +201,6 @@ class NameMeditationVC: UIViewController {
         meditateButton.setAttributedTitle(NSAttributedString(string: "묵상하기", attributes: buttonAttributes), for: .normal)
         bibleVerseChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "selectedVerseKey") ?? "", attributes: buttonAttributes), for: .normal)
         fontChoiceButton.setAttributedTitle(NSAttributedString(string: UserDefaults.standard.string(forKey: "displayFontName") ?? "", attributes: fontChoiceButtonAttributes), for: .normal)
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        self.view.endEditing(true)
     }
 
     private func containsIncompleteKoreanCharacters(_ text: String) -> Bool {
