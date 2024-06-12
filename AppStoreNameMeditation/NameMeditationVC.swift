@@ -24,14 +24,14 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 커스텀 폰트 이름 출력
-        let fontFamilies = UIFont.familyNames
-        for family in fontFamilies {
-            print("Font family: \(family)")
-            let fontNames = UIFont.fontNames(forFamilyName: family)
-            for fontName in fontNames {
-                print("Font name: \(fontName)")
-            }
-        }
+//        let fontFamilies = UIFont.familyNames
+//        for family in fontFamilies {
+//            print("Font family: \(family)")
+//            let fontNames = UIFont.fontNames(forFamilyName: family)
+//            for fontName in fontNames {
+//                print("Font name: \(fontName)")
+//            }
+//        }
         nameTextField.layer.borderWidth = 1.2
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6

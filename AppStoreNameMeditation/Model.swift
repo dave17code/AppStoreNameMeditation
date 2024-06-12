@@ -188,9 +188,8 @@ struct Model {
         ("Sagaksagak", "사각사각"), ("GamtanRoad-Batang-Regular", "감탄로드 바탕체"), ("seolleimcoolot-SemiBold", "설레임체"),
         ("BMYEONSUNG-OTF", "배달의민족 연성체"), ("RIDIBatang", "리디 바탕체"), ("Ownglyph_eunbyul21-Rg", "온글잎 은별"),
         ("Ownglyph_ryuttung-Rg", "온글잎 류뚱체"), ("Ownglyph_jooreeletter-Rg", "온글잎 주리손편지"), ("KyoboHandwriting2023wsa", "교보 손글씨 우선아"),
-        ("Yeongdeok Blueroad", "영덕 블루로드체"), ("Yeongdeok Sea", "영덕 바다체"), ("SUITE-Regular", "스위트"),
-        ("NanumSquareNeo-bRg", "나눔스퀘어 네오"), ("NanumBarunpenOTF", "나눔 바른펜"), ("NanumHimNaeRaNeunMarBoDan", "나눔 힘내라는말"),
-        ("LINESeedSansKR-Regular", "Line Seed"), ("GangwonEduAll-OTFLight", "강원교육 모두체"),
+        ("Yeongdeok Blueroad", "영덕 블루로드체"), ("SUITE-Regular", "스위트"), ("NanumSquareNeo-bRg", "나눔스퀘어 네오"), ("NanumBarunpenOTF", "나눔 바른펜"),
+        ("NanumHimNaeRaNeunMarBoDan", "나눔 힘내라는말"), ("LINESeedSansKR-Regular", "Line Seed"), ("GangwonEduAll-OTFLight", "강원교육 모두체"),
         ("Pretendard-Regular", "프리텐다드")
     ]
     

@@ -119,34 +119,42 @@ class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         UserDefaults.standard.set(indexPath.row, forKey: "selectedFontIndex")  // 선택한 폰트 인덱스를 저장합니다.
         // 각 폰트에 대해 적절한 크기를 설정합니다.
         switch indexPath.row {
-        case 1, 4, 11, 13, 14, 19, 22:
+        case 1, 4, 11, 16, 18:
             UserDefaults.standard.set(20, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(14, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(14, forKey: "buttonFontSize")
-        case 2, 6, 10, 21:
+        case 8, 9, 21:
+            UserDefaults.standard.set(20.5, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(14.5, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(14.5, forKey: "buttonFontSize")
+        case 2, 5, 12, 23:
             UserDefaults.standard.set(21, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(15, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(15, forKey: "buttonFontSize")
-        case 0, 7, 9, 20:
+        case 17:
+            UserDefaults.standard.set(21.5, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(15.5, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(15.5, forKey: "buttonFontSize")
+        case 0, 6, 7, 19:
             UserDefaults.standard.set(22, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(16, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(16, forKey: "buttonFontSize")
-        case 3:
+        case 10:
+            UserDefaults.standard.set(23.5, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(17.5, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(17.5, forKey: "buttonFontSize")
+        case 3, 13:
             UserDefaults.standard.set(24, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(18, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(18, forKey: "buttonFontSize")
-        case 15:
-            UserDefaults.standard.set(25, forKey: "bibleVerseFontSize")
-            UserDefaults.standard.set(19, forKey: "bibleChapterFontSize")
-            UserDefaults.standard.set(19, forKey: "buttonFontSize")
-        case 16, 24:
+        case 20:
+            UserDefaults.standard.set(25.5, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(19.5, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(19.5, forKey: "buttonFontSize")
+        case 14:
             UserDefaults.standard.set(26, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(20, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(20, forKey: "buttonFontSize")
-        case 17:
-            UserDefaults.standard.set(27, forKey: "bibleVerseFontSize")
-            UserDefaults.standard.set(21, forKey: "bibleChapterFontSize")
-            UserDefaults.standard.set(21, forKey: "buttonFontSize")
         default:
             UserDefaults.standard.set(23, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(17, forKey: "bibleChapterFontSize")
