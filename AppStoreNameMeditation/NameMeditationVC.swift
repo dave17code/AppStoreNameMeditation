@@ -23,15 +23,6 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 커스텀 폰트 이름 출력
-//        let fontFamilies = UIFont.familyNames
-//        for family in fontFamilies {
-//            print("Font family: \(family)")
-//            let fontNames = UIFont.fontNames(forFamilyName: family)
-//            for fontName in fontNames {
-//                print("Font name: \(fontName)")
-//            }
-//        }
         nameTextField.delegate = self
         nameTextField.layer.borderWidth = 1.2
         nameTextField.layer.cornerRadius = 12
@@ -52,6 +43,9 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
             UserDefaults.standard.set(17, forKey: "buttonFontSize") // 기본 폰트 사이즈 설정
         }
         updateBibleVerse()
+        // 키보드 이벤트를 감지하기 위한 옵저버 추가
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -245,6 +239,24 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
                 bibleVerseChapterLabel.font = UIFont(name: UserDefaults.standard.string(forKey: "fontName")!, size: CGFloat(UserDefaults.standard.integer(forKey: "bibleChapterFontSize")))
                 bibleVerseChapterLabel.setTextWithFadeAnimation(selectedVerseKey, duration: 1.0)
             }
+        }
+    }
+
+    // 키보드가 나타날 때 호출되는 메서드
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            let bottomOfTextField = nameTextField.convert(nameTextField.bounds, to: self.view).maxY
+            let topOfKeyboard = self.view.frame.height - keyboardSize.height
+            if bottomOfTextField > topOfKeyboard {
+                self.view.frame.origin.y = 0 - (bottomOfTextField - topOfKeyboard + 20)
+            }
+        }
+    }
+
+    // 키보드가 사라질 때 호출되는 메서드
+    @objc func keyboardWillHide(_ notification: Notification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
         }
     }
 }

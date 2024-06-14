@@ -116,7 +116,7 @@ class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let selectedFont = Model.shared.font[indexPath.row]
         UserDefaults.standard.set(selectedFont.fontName, forKey: "fontName")
         UserDefaults.standard.set(selectedFont.displayName, forKey: "displayFontName")
-        UserDefaults.standard.set(indexPath.row, forKey: "selectedFontIndex")  // 선택한 폰트 인덱스를 저장합니다.
+        UserDefaults.standard.set(indexPath.row, forKey: "selectedFontIndex") 
         // 각 폰트에 대해 적절한 크기를 설정합니다.
         switch indexPath.row {
         case 1, 4, 11, 16, 18:

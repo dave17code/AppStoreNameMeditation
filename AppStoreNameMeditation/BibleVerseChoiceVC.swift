@@ -24,6 +24,7 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
         bibleVerseChapter = Model.shared.originalBibleVerseDictionary.map {
             $0.keys.first ?? ""
         }
+        print(bibleVerseChapter.count)
         setupHeaderView()
         setupTableView()
     }
