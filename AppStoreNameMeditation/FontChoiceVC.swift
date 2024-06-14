@@ -143,10 +143,14 @@ class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             UserDefaults.standard.set(23.5, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(17.5, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(17.5, forKey: "buttonFontSize")
-        case 3, 13:
+        case 3:
             UserDefaults.standard.set(24, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(18, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(18, forKey: "buttonFontSize")
+        case 13:
+            UserDefaults.standard.set(24.5, forKey: "bibleVerseFontSize")
+            UserDefaults.standard.set(18.5, forKey: "bibleChapterFontSize")
+            UserDefaults.standard.set(18.5, forKey: "buttonFontSize")
         case 20:
             UserDefaults.standard.set(25.5, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(19.5, forKey: "bibleChapterFontSize")

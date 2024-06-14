@@ -58,14 +58,14 @@
                                     <constraint firstItem="4Ph-HS-TtV" firstAttribute="centerX" secondItem="UaO-ST-mh1" secondAttribute="centerX" id="Ndu-uX-Uec"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="qkc-dg-qGw">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qkc-dg-qGw">
                                 <rect key="frame" x="26" y="699" width="341" height="99"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="FjT-XN-PgF">
-                                        <rect key="frame" x="0.0" y="0.0" width="341" height="38"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="341" height="39.666666666666664"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAd-0U-kEy">
-                                                <rect key="frame" x="0.0" y="0.0" width="159" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="159" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM Yeonsung" pointSize="17"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -82,7 +82,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이름 입력" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4jI-wV-J5M">
-                                                <rect key="frame" x="182" y="0.0" width="159" height="38"/>
+                                                <rect key="frame" x="182" y="0.0" width="159" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="BMYEONSUNG-OTF" family="BM YEONSUNG OTF" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -92,10 +92,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="zJN-mi-1cb">
-                                        <rect key="frame" x="0.0" y="61" width="341" height="38"/>
+                                        <rect key="frame" x="0.0" y="59.666666666666629" width="341" height="39.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ch-Ov-Grg">
-                                                <rect key="frame" x="0.0" y="0.0" width="159" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="159" height="39.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
@@ -119,7 +119,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJq-9n-a3k">
-                                                <rect key="frame" x="182" y="0.0" width="159" height="38"/>
+                                                <rect key="frame" x="182" y="0.0" width="159" height="39.333333333333336"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button">
@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2340" y="-1337"/>
+            <point key="canvasLocation" x="-2842" y="-1398"/>
         </scene>
     </scenes>
     <resources>

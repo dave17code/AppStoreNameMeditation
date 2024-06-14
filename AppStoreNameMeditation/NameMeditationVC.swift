@@ -32,6 +32,7 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
 //                print("Font name: \(fontName)")
 //            }
 //        }
+        nameTextField.delegate = self
         nameTextField.layer.borderWidth = 1.2
         nameTextField.layer.cornerRadius = 12
         bibleVerseContainerView.layer.borderWidth = 1.6
@@ -73,6 +74,7 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
     
     // UITextFieldDelegate 메서드 구현
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Return Key Pressed")
         textField.resignFirstResponder()
         return true
     }
@@ -93,7 +95,7 @@ class NameMeditationVC: UIViewController, UITextFieldDelegate {
             let userName = nameTextField.text ?? Model.shared.userName
             if containsInvalidCharacters(userName) {
                 bibleVerseLabel.setTextWithFadeAnimation("한글이 정확하게 입력되지 않았습니다 이름을 정확하게 입력해주세요", duration: 1.0)
-                bibleVerseChapterLabel.setTextWithFadeAnimation("오류 발생", duration: 1.0)
+                bibleVerseChapterLabel.setTextWithFadeAnimation("입력 오류", duration: 1.0)
             } else {
                 Model.shared.userName = userName
                 UserDefaults.standard.set(userName, forKey: "userName") // 유저 이름 저장

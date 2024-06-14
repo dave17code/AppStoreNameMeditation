@@ -104,7 +104,8 @@ struct Model {
         ["베드로전서 2:9": "오직 name은 택하신 족속이요 왕같은 제사장들이요 거룩한 나라요 그의 소유가 된 백성이니 이는 name을 어두운 데서 불러 내어 그의 기이한 빛에 들어가게 하신 자의 아름다운 덕을 선포하게 하려 하심이라"],
         ["베드로전서 2:24": "친히 나무에 달려 그 몸으로 name의 죄를 담당하셨으니 이는 name으로 죄에 대하여 죽고 의에 대하여 살게 하려 하심이라 그가 채찍에 맞음으로 name은 나음을 얻었나니"],
         ["베드로전서 5:7": "name의 염려를 다 주께 맡겨 버리라 이는 저가 name을 권고하심이니라"],
-        ["요한일서 5:4-5": "대저 하나님께로서 난 자마다 세상을 이기느니라 세상을 이긴 이김은 이것이니 name의 믿음이니라 예수께서 하나님의 아들이심을 믿는 자가 아니면 세상을 이기는 자가 누구뇨"]
+        ["요한1서 5:4-5": "대저 하나님께로서 난 자마다 세상을 이기느니라 세상을 이긴 이김은 이것이니 name의 믿음이니라 예수께서 하나님의 아들이심을 믿는 자가 아니면 세상을 이기는 자가 누구뇨"],
+        ["요한3서 1:2": "사랑하는 name이여 name의 영혼이 잘됨 같이 name이 범사에 잘되고 강건하기를 내가 간구하노라"]
     ]
     
     let originalBibleVerseDictionary: [[String: String]] = [
@@ -179,7 +180,8 @@ struct Model {
         ["베드로전서 2:9": "오직 너희는 택하신 족속이요 왕같은 제사장들이요 거룩한 나라요 그의 소유가 된 백성이니 이는 너희를 어두운 데서 불러 내어 그의 기이한 빛에 들어가게 하신 자의 아름다운 덕을 선포하게 하려 하심이라"],
         ["베드로전서 2:24": "친히 나무에 달려 그 몸으로 우리 죄를 담당하셨으니 이는 우리로 죄에 대하여 죽고 의에 대하여 살게 하려 하심이라 그가 채찍에 맞음으로 너희는 나음을 얻었나니"],
         ["베드로전서 5:7": "너희 염려를 다 주께 맡겨 버리라 이는 저가 너희를 권고하심이니라"],
-        ["요한일서 5:4-5": "대저 하나님께로서 난 자마다 세상을 이기느니라 세상을 이긴 이김은 이것이니 우리의 믿음이니라 예수께서 하나님의 아들이심을 믿는 자가 아니면 세상을 이기는 자가 누구뇨"]
+        ["요한1서 5:4-5": "대저 하나님께로서 난 자마다 세상을 이기느니라 세상을 이긴 이김은 이것이니 우리의 믿음이니라 예수께서 하나님의 아들이심을 믿는 자가 아니면 세상을 이기는 자가 누구뇨"],
+        ["요한3서 1:2": "사랑하는 자여 네 영혼이 잘됨 같이 네가 범사에 잘되고 강건하기를 내가 간구하노라"]
     ]
     
     let font: [(fontName: String, displayName: String)] = [
@@ -219,6 +221,7 @@ struct Model {
         var adjustedVerse = verse
         if hasBatchim {
             adjustedVerse = adjustedVerse
+                .replacingOccurrences(of: "name이여", with: "\(userName)이여")
                 .replacingOccurrences(of: "name의", with: "\(userName)의")
                 .replacingOccurrences(of: "name은", with: "\(userName)은")
                 .replacingOccurrences(of: "name이", with: "\(userName)이")
@@ -228,6 +231,7 @@ struct Model {
                 .replacingOccurrences(of: "name에게", with: "\(userName)에게")
         } else {
             adjustedVerse = adjustedVerse
+                .replacingOccurrences(of: "name이여", with: "\(userName)여")
                 .replacingOccurrences(of: "name의", with: "\(userName)의")
                 .replacingOccurrences(of: "name은", with: "\(userName)는")
                 .replacingOccurrences(of: "name이", with: "\(userName)가")
