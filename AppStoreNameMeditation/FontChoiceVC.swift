@@ -119,11 +119,11 @@ class FontChoiceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         UserDefaults.standard.set(indexPath.row, forKey: "selectedFontIndex") 
         // 각 폰트에 대해 적절한 크기를 설정합니다.
         switch indexPath.row {
-        case 1, 4, 11, 16, 18:
+        case 1, 4, 9, 11, 16, 18:
             UserDefaults.standard.set(20, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(14, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(14, forKey: "buttonFontSize")
-        case 8, 9, 21:
+        case 8, 21:
             UserDefaults.standard.set(20.5, forKey: "bibleVerseFontSize")
             UserDefaults.standard.set(14.5, forKey: "bibleChapterFontSize")
             UserDefaults.standard.set(14.5, forKey: "buttonFontSize")
