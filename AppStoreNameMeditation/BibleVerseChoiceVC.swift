@@ -110,6 +110,7 @@ class BibleVerseChoiceVC: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
         let selectedItem = bibleVerseChapter[indexPath.row]
         UserDefaults.standard.set(selectedItem, forKey: "selectedVerseKey")
         UserDefaults.standard.set(indexPath.row, forKey: "selectedVerseIndex")
